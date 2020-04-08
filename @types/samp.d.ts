@@ -177,7 +177,7 @@ declare class samp {
    * @remarks This callback can also be called by NPC.
    * @returns {void}
    */
-  static on(eventName: 'OnPlayerText', func: (playerid: number, text: number) => void): void;
+  static on(eventName: 'OnPlayerText', func: (playerid: number, text: string) => void): void;
   /**
    * Adds a new listener to OnPlayerCommandText
    *
@@ -191,7 +191,7 @@ declare class samp {
    * @remarks This callback can also be called by NPC.
    * @returns {void}
    */
-  static on(eventName: 'OnPlayerCommandText', func: (playerid: number, cmdtext: number) => void): void;
+  static on(eventName: 'OnPlayerCommandText', func: (playerid: number, cmdtext: string) => void): void;
   /**
    * Adds a new listener to OnPlayerRequestClass
    *
@@ -364,7 +364,7 @@ declare class samp {
    * @remarks When the player is not logged in as RCON admin and uses /rcon login, this callback will not be called and OnRconLoginAttempt is called instead. However, when the player is logged in as RCON admin, the use of this command will call this callback. 
    * @returns {void}
    */
-  static on(eventName: 'OnRconCommand', func: (cmd: number) => void): void;
+  static on(eventName: 'OnRconCommand', func: (cmd: string) => void): void;
   /**
    * Adds a new listener to OnPlayerRequestSpawn
    *
@@ -600,7 +600,7 @@ declare class samp {
    * @remarks This callback is only called when the player is not yet logged in. When the player is logged in, OnRconCommand is called instead.
    * @returns {void}
    */
-  static on(eventName: 'OnRconLoginAttempt', func: (ip: number, password: number, success: number) => void): void;
+  static on(eventName: 'OnRconLoginAttempt', func: (ip: string, password: string, success: number) => void): void;
   /**
    * Adds a new listener to OnPlayerUpdate
    *
@@ -713,7 +713,7 @@ declare class samp {
    * @remarks Parameters can contain different values, based on dialog&#x27;s style.
    * @returns {void}
    */
-  static on(eventName: 'OnDialogResponse', func: (playerid: number, dialogid: number, response: number, listitem: number, inputtext: number) => void): void;
+  static on(eventName: 'OnDialogResponse', func: (playerid: number, dialogid: number, response: number, listitem: number, inputtext: string) => void): void;
   /**
    * Adds a new listener to OnPlayerTakeDamage
    *
@@ -834,7 +834,7 @@ declare class samp {
    * @remarks  	This callback was added in SA-MP 0.3z R2-2 and will not work in earlier versions!
    * @returns {void}
    */
-  static on(eventName: 'OnIncomingConnection', func: (playerid: number, ip_address: number, port: number) => void): void;
+  static on(eventName: 'OnIncomingConnection', func: (playerid: number, ip_address: string, port: number) => void): void;
   /**
    * Adds a new listener to OnTrailerUpdate
    *
@@ -1157,7 +1157,7 @@ declare class samp {
    * @remarks This callback can also be called by NPC.
    * @returns {void}
    */
-  static addListener(eventName: 'OnPlayerText', func: (playerid: number, text: number) => void): void;
+  static addListener(eventName: 'OnPlayerText', func: (playerid: number, text: string) => void): void;
   /**
    * Adds a new listener to OnPlayerCommandText
    *
@@ -1172,7 +1172,7 @@ declare class samp {
    * @remarks This callback can also be called by NPC.
    * @returns {void}
    */
-  static addListener(eventName: 'OnPlayerCommandText', func: (playerid: number, cmdtext: number) => void): void;
+  static addListener(eventName: 'OnPlayerCommandText', func: (playerid: number, cmdtext: string) => void): void;
   /**
    * Adds a new listener to OnPlayerRequestClass
    *
@@ -1354,7 +1354,7 @@ declare class samp {
    * @remarks When the player is not logged in as RCON admin and uses /rcon login, this callback will not be called and OnRconLoginAttempt is called instead. However, when the player is logged in as RCON admin, the use of this command will call this callback. 
    * @returns {void}
    */
-  static addListener(eventName: 'OnRconCommand', func: (cmd: number) => void): void;
+  static addListener(eventName: 'OnRconCommand', func: (cmd: string) => void): void;
   /**
    * Adds a new listener to OnPlayerRequestSpawn
    *
@@ -1605,7 +1605,7 @@ declare class samp {
    * @remarks This callback is only called when the player is not yet logged in. When the player is logged in, OnRconCommand is called instead.
    * @returns {void}
    */
-  static addListener(eventName: 'OnRconLoginAttempt', func: (ip: number, password: number, success: number) => void): void;
+  static addListener(eventName: 'OnRconLoginAttempt', func: (ip: string, password: string, success: number) => void): void;
   /**
    * Adds a new listener to OnPlayerUpdate
    *
@@ -1726,7 +1726,7 @@ declare class samp {
    * @remarks Parameters can contain different values, based on dialog&#x27;s style.
    * @returns {void}
    */
-  static addListener(eventName: 'OnDialogResponse', func: (playerid: number, dialogid: number, response: number, listitem: number, inputtext: number) => void): void;
+  static addListener(eventName: 'OnDialogResponse', func: (playerid: number, dialogid: number, response: number, listitem: number, inputtext: string) => void): void;
   /**
    * Adds a new listener to OnPlayerTakeDamage
    *
@@ -1854,7 +1854,7 @@ declare class samp {
    * @remarks  	This callback was added in SA-MP 0.3z R2-2 and will not work in earlier versions!
    * @returns {void}
    */
-  static addListener(eventName: 'OnIncomingConnection', func: (playerid: number, ip_address: number, port: number) => void): void;
+  static addListener(eventName: 'OnIncomingConnection', func: (playerid: number, ip_address: string, port: number) => void): void;
   /**
    * Adds a new listener to OnTrailerUpdate
    *
@@ -2185,7 +2185,7 @@ declare class samp {
    * @remarks This callback can also be called by NPC.
    * @returns {void}
    */
-  static addEventListener(eventName: 'OnPlayerText', func: (playerid: number, text: number) => void): void;
+  static addEventListener(eventName: 'OnPlayerText', func: (playerid: number, text: string) => void): void;
   /**
    * Adds a new listener to OnPlayerCommandText
    *
@@ -2200,7 +2200,7 @@ declare class samp {
    * @remarks This callback can also be called by NPC.
    * @returns {void}
    */
-  static addEventListener(eventName: 'OnPlayerCommandText', func: (playerid: number, cmdtext: number) => void): void;
+  static addEventListener(eventName: 'OnPlayerCommandText', func: (playerid: number, cmdtext: string) => void): void;
   /**
    * Adds a new listener to OnPlayerRequestClass
    *
@@ -2382,7 +2382,7 @@ declare class samp {
    * @remarks When the player is not logged in as RCON admin and uses /rcon login, this callback will not be called and OnRconLoginAttempt is called instead. However, when the player is logged in as RCON admin, the use of this command will call this callback. 
    * @returns {void}
    */
-  static addEventListener(eventName: 'OnRconCommand', func: (cmd: number) => void): void;
+  static addEventListener(eventName: 'OnRconCommand', func: (cmd: string) => void): void;
   /**
    * Adds a new listener to OnPlayerRequestSpawn
    *
@@ -2633,7 +2633,7 @@ declare class samp {
    * @remarks This callback is only called when the player is not yet logged in. When the player is logged in, OnRconCommand is called instead.
    * @returns {void}
    */
-  static addEventListener(eventName: 'OnRconLoginAttempt', func: (ip: number, password: number, success: number) => void): void;
+  static addEventListener(eventName: 'OnRconLoginAttempt', func: (ip: string, password: string, success: number) => void): void;
   /**
    * Adds a new listener to OnPlayerUpdate
    *
@@ -2754,7 +2754,7 @@ declare class samp {
    * @remarks Parameters can contain different values, based on dialog&#x27;s style.
    * @returns {void}
    */
-  static addEventListener(eventName: 'OnDialogResponse', func: (playerid: number, dialogid: number, response: number, listitem: number, inputtext: number) => void): void;
+  static addEventListener(eventName: 'OnDialogResponse', func: (playerid: number, dialogid: number, response: number, listitem: number, inputtext: string) => void): void;
   /**
    * Adds a new listener to OnPlayerTakeDamage
    *
@@ -2882,7 +2882,7 @@ declare class samp {
    * @remarks  	This callback was added in SA-MP 0.3z R2-2 and will not work in earlier versions!
    * @returns {void}
    */
-  static addEventListener(eventName: 'OnIncomingConnection', func: (playerid: number, ip_address: number, port: number) => void): void;
+  static addEventListener(eventName: 'OnIncomingConnection', func: (playerid: number, ip_address: string, port: number) => void): void;
   /**
    * Adds a new listener to OnTrailerUpdate
    *
@@ -3167,7 +3167,7 @@ declare class samp {
    * @param {function} func - Event callback
    * @returns {void}
    */
-  static removeListener(eventName: 'OnPlayerText', func: (playerid: number, text: number) => void): void;
+  static removeListener(eventName: 'OnPlayerText', func: (playerid: number, text: string) => void): void;
   /**
    * Removes a specific listener for OnPlayerCommandText
    *
@@ -3176,7 +3176,7 @@ declare class samp {
    * @param {function} func - Event callback
    * @returns {void}
    */
-  static removeListener(eventName: 'OnPlayerCommandText', func: (playerid: number, cmdtext: number) => void): void;
+  static removeListener(eventName: 'OnPlayerCommandText', func: (playerid: number, cmdtext: string) => void): void;
   /**
    * Removes a specific listener for OnPlayerRequestClass
    *
@@ -3257,7 +3257,7 @@ declare class samp {
    * @param {function} func - Event callback
    * @returns {void}
    */
-  static removeListener(eventName: 'OnRconCommand', func: (cmd: number) => void): void;
+  static removeListener(eventName: 'OnRconCommand', func: (cmd: string) => void): void;
   /**
    * Removes a specific listener for OnPlayerRequestSpawn
    *
@@ -3392,7 +3392,7 @@ declare class samp {
    * @param {function} func - Event callback
    * @returns {void}
    */
-  static removeListener(eventName: 'OnRconLoginAttempt', func: (ip: number, password: number, success: number) => void): void;
+  static removeListener(eventName: 'OnRconLoginAttempt', func: (ip: string, password: string, success: number) => void): void;
   /**
    * Removes a specific listener for OnPlayerUpdate
    *
@@ -3464,7 +3464,7 @@ declare class samp {
    * @param {function} func - Event callback
    * @returns {void}
    */
-  static removeListener(eventName: 'OnDialogResponse', func: (playerid: number, dialogid: number, response: number, listitem: number, inputtext: number) => void): void;
+  static removeListener(eventName: 'OnDialogResponse', func: (playerid: number, dialogid: number, response: number, listitem: number, inputtext: string) => void): void;
   /**
    * Removes a specific listener for OnPlayerTakeDamage
    *
@@ -3527,7 +3527,7 @@ declare class samp {
    * @param {function} func - Event callback
    * @returns {void}
    */
-  static removeListener(eventName: 'OnIncomingConnection', func: (playerid: number, ip_address: number, port: number) => void): void;
+  static removeListener(eventName: 'OnIncomingConnection', func: (playerid: number, ip_address: string, port: number) => void): void;
   /**
    * Removes a specific listener for OnTrailerUpdate
    *
@@ -3736,7 +3736,7 @@ declare class samp {
    * @param {function} func - Event callback
    * @returns {void}
    */
-  static removeEventListener(eventName: 'OnPlayerText', func: (playerid: number, text: number) => void): void;
+  static removeEventListener(eventName: 'OnPlayerText', func: (playerid: number, text: string) => void): void;
   /**
    * Removes a specific listener for OnPlayerCommandText
    *
@@ -3746,7 +3746,7 @@ declare class samp {
    * @param {function} func - Event callback
    * @returns {void}
    */
-  static removeEventListener(eventName: 'OnPlayerCommandText', func: (playerid: number, cmdtext: number) => void): void;
+  static removeEventListener(eventName: 'OnPlayerCommandText', func: (playerid: number, cmdtext: string) => void): void;
   /**
    * Removes a specific listener for OnPlayerRequestClass
    *
@@ -3836,7 +3836,7 @@ declare class samp {
    * @param {function} func - Event callback
    * @returns {void}
    */
-  static removeEventListener(eventName: 'OnRconCommand', func: (cmd: number) => void): void;
+  static removeEventListener(eventName: 'OnRconCommand', func: (cmd: string) => void): void;
   /**
    * Removes a specific listener for OnPlayerRequestSpawn
    *
@@ -3986,7 +3986,7 @@ declare class samp {
    * @param {function} func - Event callback
    * @returns {void}
    */
-  static removeEventListener(eventName: 'OnRconLoginAttempt', func: (ip: number, password: number, success: number) => void): void;
+  static removeEventListener(eventName: 'OnRconLoginAttempt', func: (ip: string, password: string, success: number) => void): void;
   /**
    * Removes a specific listener for OnPlayerUpdate
    *
@@ -4066,7 +4066,7 @@ declare class samp {
    * @param {function} func - Event callback
    * @returns {void}
    */
-  static removeEventListener(eventName: 'OnDialogResponse', func: (playerid: number, dialogid: number, response: number, listitem: number, inputtext: number) => void): void;
+  static removeEventListener(eventName: 'OnDialogResponse', func: (playerid: number, dialogid: number, response: number, listitem: number, inputtext: string) => void): void;
   /**
    * Removes a specific listener for OnPlayerTakeDamage
    *
@@ -4136,7 +4136,7 @@ declare class samp {
    * @param {function} func - Event callback
    * @returns {void}
    */
-  static removeEventListener(eventName: 'OnIncomingConnection', func: (playerid: number, ip_address: number, port: number) => void): void;
+  static removeEventListener(eventName: 'OnIncomingConnection', func: (playerid: number, ip_address: string, port: number) => void): void;
   /**
    * Removes a specific listener for OnTrailerUpdate
    *
