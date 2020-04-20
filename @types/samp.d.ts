@@ -3039,7 +3039,7 @@ declare class samp {
    * @param {function} func - Event callback
    * @returns {void}
    */
-  static on(eventName: string, func: () => void): void;
+  static on(eventName: string, func: (...args: Array<any>) => void): void;
   /**
    * Adds a new listener to the given event
    *
@@ -3049,7 +3049,7 @@ declare class samp {
    * @param {function} func - Event callback
    * @returns {void}
    */
-  static addListener(eventName: string, func: () => void): void;
+  static addListener(eventName: string, func: (...args: Array<any>) => void): void;
   /**
    * Adds a new listener to the given event
    *
@@ -3059,7 +3059,7 @@ declare class samp {
    * @param {function} func - Event callback
    * @returns {void}
    */
-  static addEventListener(eventName: string, func: () => void): void;
+  static addEventListener(eventName: string, func: (...args: Array<any>) => void): void;
 
   /**
    * Removes all listeners
@@ -3073,7 +3073,7 @@ declare class samp {
    * Removes a specific listener for OnGameModeInit
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnGameModeInit] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3082,7 +3082,7 @@ declare class samp {
    * Removes a specific listener for OnGameModeExit
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnGameModeExit] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3091,7 +3091,7 @@ declare class samp {
    * Removes a specific listener for OnFilterScriptInit
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnFilterScriptInit] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3100,7 +3100,7 @@ declare class samp {
    * Removes a specific listener for OnFilterScriptExit
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnFilterScriptExit] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3109,7 +3109,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerConnect
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerConnect] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3118,7 +3118,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerDisconnect
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerDisconnect] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3127,7 +3127,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerSpawn
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerSpawn] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3136,7 +3136,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerDeath
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerDeath] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3145,7 +3145,7 @@ declare class samp {
    * Removes a specific listener for OnVehicleSpawn
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnVehicleSpawn] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3154,7 +3154,7 @@ declare class samp {
    * Removes a specific listener for OnVehicleDeath
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnVehicleDeath] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3163,7 +3163,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerText
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerText] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3172,7 +3172,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerCommandText
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerCommandText] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3181,7 +3181,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerRequestClass
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerRequestClass] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3190,7 +3190,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerEnterVehicle
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerEnterVehicle] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3199,7 +3199,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerExitVehicle
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerExitVehicle] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3208,7 +3208,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerStateChange
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerStateChange] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3217,7 +3217,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerEnterCheckpoint
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerEnterCheckpoint] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3226,7 +3226,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerLeaveCheckpoint
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerLeaveCheckpoint] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3235,7 +3235,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerEnterRaceCheckpoint
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerEnterRaceCheckpoint] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3244,7 +3244,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerLeaveRaceCheckpoint
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerLeaveRaceCheckpoint] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3253,7 +3253,7 @@ declare class samp {
    * Removes a specific listener for OnRconCommand
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnRconCommand] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3262,7 +3262,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerRequestSpawn
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerRequestSpawn] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3271,7 +3271,7 @@ declare class samp {
    * Removes a specific listener for OnObjectMoved
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnObjectMoved] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3280,7 +3280,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerObjectMoved
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerObjectMoved] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3289,7 +3289,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerPickUpPickup
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerPickUpPickup] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3298,7 +3298,7 @@ declare class samp {
    * Removes a specific listener for OnVehicleMod
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnVehicleMod] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3307,7 +3307,7 @@ declare class samp {
    * Removes a specific listener for OnEnterExitModShop
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnEnterExitModShop] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3316,7 +3316,7 @@ declare class samp {
    * Removes a specific listener for OnVehiclePaintjob
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnVehiclePaintjob] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3325,7 +3325,7 @@ declare class samp {
    * Removes a specific listener for OnVehicleRespray
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnVehicleRespray] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3334,7 +3334,7 @@ declare class samp {
    * Removes a specific listener for OnVehicleDamageStatusUpdate
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnVehicleDamageStatusUpdate] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3343,7 +3343,7 @@ declare class samp {
    * Removes a specific listener for OnUnoccupiedVehicleUpdate
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnUnoccupiedVehicleUpdate] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3352,7 +3352,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerSelectedMenuRow
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerSelectedMenuRow] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3361,7 +3361,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerExitedMenu
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerExitedMenu] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3370,7 +3370,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerInteriorChange
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerInteriorChange] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3379,7 +3379,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerKeyStateChange
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerKeyStateChange] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3388,7 +3388,7 @@ declare class samp {
    * Removes a specific listener for OnRconLoginAttempt
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnRconLoginAttempt] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3397,7 +3397,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerUpdate
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerUpdate] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3406,7 +3406,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerStreamIn
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerStreamIn] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3415,7 +3415,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerStreamOut
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerStreamOut] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3424,7 +3424,7 @@ declare class samp {
    * Removes a specific listener for OnVehicleStreamIn
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnVehicleStreamIn] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3433,7 +3433,7 @@ declare class samp {
    * Removes a specific listener for OnVehicleStreamOut
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnVehicleStreamOut] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3442,7 +3442,7 @@ declare class samp {
    * Removes a specific listener for OnActorStreamIn
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnActorStreamIn] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3451,7 +3451,7 @@ declare class samp {
    * Removes a specific listener for OnActorStreamOut
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnActorStreamOut] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3460,7 +3460,7 @@ declare class samp {
    * Removes a specific listener for OnDialogResponse
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnDialogResponse] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3469,7 +3469,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerTakeDamage
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerTakeDamage] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3478,7 +3478,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerGiveDamage
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerGiveDamage] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3487,7 +3487,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerGiveDamageActor
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerGiveDamageActor] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3496,7 +3496,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerClickMap
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerClickMap] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3505,7 +3505,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerClickTextDraw
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerClickTextDraw] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3514,7 +3514,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerClickPlayerTextDraw
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerClickPlayerTextDraw] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3523,7 +3523,7 @@ declare class samp {
    * Removes a specific listener for OnIncomingConnection
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnIncomingConnection] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3532,7 +3532,7 @@ declare class samp {
    * Removes a specific listener for OnTrailerUpdate
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnTrailerUpdate] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3541,7 +3541,7 @@ declare class samp {
    * Removes a specific listener for OnVehicleSirenStateChange
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnVehicleSirenStateChange] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3550,7 +3550,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerFinishedDownloading
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerFinishedDownloading] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3559,7 +3559,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerClickPlayer
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerClickPlayer] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3568,7 +3568,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerSelectObject
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerSelectObject] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3577,7 +3577,7 @@ declare class samp {
    * Removes a specific listener for OnPlayerWeaponShot
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerWeaponShot] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3586,7 +3586,7 @@ declare class samp {
    * Removes a specific listener for OnClientCheckResponse
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnClientCheckResponse] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3595,7 +3595,7 @@ declare class samp {
    * Removes a specific listener for OnScriptCash
    *
    * @name samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnScriptCash] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3608,7 +3608,7 @@ declare class samp {
    * @param {function} func - Event callback
    * @returns {void}
    */
-  static removeListener(eventName: string, func: () => void): void;
+  static removeListener(eventName: string, func: (...args: Array<any>) => void): void;
   /**
    * Removes specific listeners given in the Array
    *
@@ -3617,7 +3617,7 @@ declare class samp {
    * @param {function[]} funcs - Array of event callbacks
    * @returns {void}
    */
-  static removeListener(eventName: string, funcs: Array<() => void>): void;
+  static removeListener(eventName: string, funcs: Array<(...args: Array<any>) => void>): void;
   /**
    * Removes all listeners
    *
@@ -3632,7 +3632,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnGameModeInit] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3642,7 +3642,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnGameModeExit] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3652,7 +3652,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnFilterScriptInit] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3662,7 +3662,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnFilterScriptExit] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3672,7 +3672,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerConnect] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3682,7 +3682,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerDisconnect] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3692,7 +3692,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerSpawn] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3702,7 +3702,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerDeath] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3712,7 +3712,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnVehicleSpawn] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3722,7 +3722,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnVehicleDeath] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3732,7 +3732,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerText] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3742,7 +3742,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerCommandText] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3752,7 +3752,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerRequestClass] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3762,7 +3762,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerEnterVehicle] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3772,7 +3772,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerExitVehicle] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3782,7 +3782,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerStateChange] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3792,7 +3792,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerEnterCheckpoint] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3802,7 +3802,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerLeaveCheckpoint] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3812,7 +3812,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerEnterRaceCheckpoint] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3822,7 +3822,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerLeaveRaceCheckpoint] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3832,7 +3832,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnRconCommand] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3842,7 +3842,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerRequestSpawn] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3852,7 +3852,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnObjectMoved] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3862,7 +3862,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerObjectMoved] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3872,7 +3872,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerPickUpPickup] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3882,7 +3882,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnVehicleMod] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3892,7 +3892,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnEnterExitModShop] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3902,7 +3902,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnVehiclePaintjob] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3912,7 +3912,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnVehicleRespray] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3922,7 +3922,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnVehicleDamageStatusUpdate] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3932,7 +3932,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnUnoccupiedVehicleUpdate] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3942,7 +3942,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerSelectedMenuRow] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3952,7 +3952,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerExitedMenu] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3962,7 +3962,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerInteriorChange] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3972,7 +3972,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerKeyStateChange] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3982,7 +3982,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnRconLoginAttempt] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -3992,7 +3992,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerUpdate] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -4002,7 +4002,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerStreamIn] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -4012,7 +4012,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerStreamOut] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -4022,7 +4022,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnVehicleStreamIn] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -4032,7 +4032,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnVehicleStreamOut] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -4042,7 +4042,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnActorStreamIn] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -4052,7 +4052,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnActorStreamOut] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -4062,7 +4062,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnDialogResponse] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -4072,7 +4072,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerTakeDamage] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -4082,7 +4082,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerGiveDamage] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -4092,7 +4092,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerGiveDamageActor] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -4102,7 +4102,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerClickMap] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -4112,7 +4112,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerClickTextDraw] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -4122,7 +4122,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerClickPlayerTextDraw] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -4132,7 +4132,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnIncomingConnection] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -4142,7 +4142,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnTrailerUpdate] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -4152,7 +4152,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnVehicleSirenStateChange] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -4162,7 +4162,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerFinishedDownloading] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -4172,7 +4172,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerClickPlayer] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -4182,7 +4182,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerSelectObject] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -4192,7 +4192,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerWeaponShot] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -4202,7 +4202,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnClientCheckResponse] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -4212,7 +4212,7 @@ declare class samp {
    *
    * @name samp.removeEventListener
    * @alias samp.removeListener
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnScriptCash] - Name of the event
    * @param {function} func - Event callback
    * @returns {void}
    */
@@ -4226,7 +4226,7 @@ declare class samp {
    * @param {function} func - Event callback
    * @returns {void}
    */
-  static removeEventListener(eventName: string, func: () => void): void;
+  static removeEventListener(eventName: string, func: (...args: Array<any>) => void): void;
   /**
    * Removes specific listeners given in the Array
    *
@@ -4236,7 +4236,7 @@ declare class samp {
    * @param {function[]} funcs - Array of event callbacks
    * @returns {void}
    */
-  static removeEventListener(eventName: string, funcs: Array<() => void>): void;
+  static removeEventListener(eventName: string, funcs: Array<(...args: Array<any>) => void>): void;
 
   /**
    * Register a new event
@@ -4252,7 +4252,12 @@ declare class samp {
    * Triggers the OnGameModeInit event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnGameModeInit] - Name of the event
+   * @summary This callback is triggered when the gamemode starts.
+   * @see OnGameModeExit
+   * @see OnFilterScriptInit
+   * @see OnFilterScriptExit
+   * @remarks This function can also be used in a filterscript to detect if the gamemode changes with RCON commands like changemode or gmx, as changing the gamemode does not reload a filterscript.
    * @returns {void}
    */
   static fire(eventName: 'OnGameModeInit'): void;
@@ -4260,7 +4265,15 @@ declare class samp {
    * Triggers the OnGameModeExit event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnGameModeExit] - Name of the event
+   * @summary This callback is called when a gamemode ends, either through &#x27;gmx&#x27;, the server being shut down, or GameModeExit.
+   * @see OnGameModeInit
+   * @see OnFilterScriptExit
+   * @see OnFilterScriptInit
+   * @see GameModeExit
+   * @remarks This function can also be used in a filterscript to detect if the gamemode changes with RCON commands like changemode or gmx, as changing the gamemode does not reload a filterscript.
+   * @remarks When using OnGameModeExit in conjunction with the &#x27;rcon gmx&#x27; console command keep in mind there is a potential for client bugs to occur an example of this is excessive RemoveBuildingForPlayer calls during OnGameModeInit which could result in a client crash. 
+   * @remarks This callback will NOT be called if the server crashes or the process is killed by other means, such as using the Linux kill command or pressing the close-button on the Windows console. 
    * @returns {void}
    */
   static fire(eventName: 'OnGameModeExit'): void;
@@ -4268,7 +4281,11 @@ declare class samp {
    * Triggers the OnFilterScriptInit event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnFilterScriptInit] - Name of the event
+   * @summary This callback is called when a filterscript is initialized (loaded). It is only called inside the filterscript which is starting.
+   * @see OnFilterScriptExit
+   * @see OnGameModeInit
+   * @see OnGameModeExit
    * @returns {void}
    */
   static fire(eventName: 'OnFilterScriptInit'): void;
@@ -4276,7 +4293,11 @@ declare class samp {
    * Triggers the OnFilterScriptExit event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnFilterScriptExit] - Name of the event
+   * @summary This callback is called when a filterscript is unloaded. It is only called inside the filterscript which is unloaded.
+   * @see OnFilterScriptInit
+   * @see OnGameModeInit
+   * @see OnGameModeExit
    * @returns {void}
    */
   static fire(eventName: 'OnFilterScriptExit'): void;
@@ -4284,456 +4305,1020 @@ declare class samp {
    * Triggers the OnPlayerConnect event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerConnect] - Name of the event
+   * @param {number} playerid - The ID of the player that connected
+   * @summary This callback is called when a player connects to the server.
+   * @see OnPlayerDisconnect
+   * @see OnIncomingConnection
+   * @see OnPlayerFinishedDownloading
+   * @remarks This callback can also be called by NPC.
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerConnect'): void;
+  static fire(eventName: 'OnPlayerConnect', playerid: number): void;
   /**
    * Triggers the OnPlayerDisconnect event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerDisconnect] - Name of the event
+   * @param {number} playerid - The ID of the player that disconnected
+   * @param {number} reason - The reason for the disconnection. See table below
+   * @summary This callback is called when a player disconnects from the server.
+   * @see OnPlayerConnect
+   * @see OnIncomingConnection
+   * @see OnPlayerFinishedDownloading
+   * @remarks This callback can also be called by NPC.
+   * @remarks Some functions might not work correctly when used in this callback because the player is already disconnected when the callback is called. This means that you can&#x27;t get unambiguous information from functions like GetPlayerIp and GetPlayerPos.
+   * @remarks 
+  Reasons:
+  
+    0 - timeout/Crash - the player&#x27;s connection was lost. Either their game crashed or their network had a fault.
+    1 - quit - the player purposefully quit, either using the /quit (/q) command or via the pause menu.
+    2 - kick/ban - the player was kicked or banned by the server.
+  
+
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerDisconnect'): void;
+  static fire(eventName: 'OnPlayerDisconnect', playerid: number, reason: number): void;
   /**
    * Triggers the OnPlayerSpawn event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerSpawn] - Name of the event
+   * @param {number} playerid - The ID of the player that spawned
+   * @summary This callback is called when a player spawns.(i.e. after caling SpawnPlayer function).
+   * @see OnPlayerDeath
+   * @see OnVehicleSpawn
+   * @see SpawnPlayer
+   * @see AddPlayerClass
+   * @see SetSpawnInfo
+   * @remarks This callback can also be called by NPC.
+   * @remarks The game sometimes deducts $100 from players after spawn.
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerSpawn'): void;
+  static fire(eventName: 'OnPlayerSpawn', playerid: number): void;
   /**
    * Triggers the OnPlayerDeath event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerDeath] - Name of the event
+   * @param {number} playerid - The ID of the player that died
+   * @param {number} killerid - The ID of the player that killed the player who died, or INVALID_PLAYER_ID if there was none
+   * @param {number} reason - The ID of the reason for the player&#x27;s death
+   * @summary This callback is called when a player dies, either by suicide or by being killed by another player.
+   * @see OnPlayerSpawn
+   * @see SendDeathMessage
+   * @see SetPlayerHealth
+   * @remarks 
+  The reason will return 37 (flame thrower) from any fire sources (e.g. molotov, 18)
+  The reason will return 51 from any weapon that creates an explosion (e.g. RPG, grenade)
+  You do not need to check whether killerid is valid before using it in SendDeathMessage. INVALID_PLAYER_ID is a valid killerid ID parameter in that function.
+  playerid is the only one who can call the callback. (good to know for anti fake death)
+
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerDeath'): void;
+  static fire(eventName: 'OnPlayerDeath', playerid: number, killerid: number, reason: number): void;
   /**
    * Triggers the OnVehicleSpawn event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnVehicleSpawn] - Name of the event
+   * @param {number} vehicleid - The ID of the vehicle that spawned
+   * @summary This callback is called when a vehicle respawns.
+   * @see OnVehicleDeath
+   * @see OnPlayerSpawn
+   * @see SetVehicleToRespawn
+   * @see CreateVehicle
    * @returns {void}
    */
-  static fire(eventName: 'OnVehicleSpawn'): void;
+  static fire(eventName: 'OnVehicleSpawn', vehicleid: number): void;
   /**
    * Triggers the OnVehicleDeath event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnVehicleDeath] - Name of the event
+   * @param {number} vehicleid - The ID of the vehicle that was destroyed
+   * @param {number} killerid - The ID of the player that reported (synced) the vehicle&#x27;s destruction (name is misleading). Generally the driver or a passenger (if any) or the closest player
+   * @summary This callback is called when a vehicle is destroyed - either by exploding or becoming submerged in water.
+   * @see OnVehicleSpawn
+   * @see SetVehicleHealth
+   * @remarks This callback can also be called by NPC.
+   * @remarks This callback will also be called when a vehicle enters water, but the vehicle can be saved from destruction by teleportation or driving out (if only partially submerged). The callback won&#x27;t be called a second time, and the vehicle may disappear when the driver exits, or after a short time.
    * @returns {void}
    */
-  static fire(eventName: 'OnVehicleDeath'): void;
+  static fire(eventName: 'OnVehicleDeath', vehicleid: number, killerid: number): void;
   /**
    * Triggers the OnPlayerText event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerText] - Name of the event
+   * @param {number} playerid - The ID of the player who typed the text
+   * @param {string} text - The text the player typed
+   * @summary Called when a player sends a chat message.
+   * @see OnPlayerCommandText
+   * @see SendPlayerMessageToPlayer
+   * @see SendPlayerMessageToAll
+   * @remarks This callback can also be called by NPC.
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerText'): void;
+  static fire(eventName: 'OnPlayerText', playerid: number, text: string): void;
   /**
    * Triggers the OnPlayerCommandText event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerCommandText] - Name of the event
+   * @param {number} playerid - The ID of the player that entered a command
+   * @param {string} cmdtext - The command that was entered (including the forward slash)
+   * @summary This callback is called when a player enters a command into the client chat window. Commands are anything that start with a forward slash, e.g. /help.
+   * @see OnPlayerText
+   * @see OnRconCommand
+   * @see SendRconCommand
+   * @remarks This callback can also be called by NPC.
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerCommandText'): void;
+  static fire(eventName: 'OnPlayerCommandText', playerid: number, cmdtext: string): void;
   /**
    * Triggers the OnPlayerRequestClass event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerRequestClass] - Name of the event
+   * @param {number} playerid - The ID of the player that changed class
+   * @param {number} classid - The ID of the current class being viewed (returned by AddPlayerClass)
+   * @summary Called when a player changes class at class selection (and when class selection first appears).
+   * @see OnPlayerRequestSpawn
+   * @see AddPlayerClass
+   * @remarks This callback can also be called by NPC.
+   * @remarks This callback is also called when a player presses F4.
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerRequestClass'): void;
+  static fire(eventName: 'OnPlayerRequestClass', playerid: number, classid: number): void;
   /**
    * Triggers the OnPlayerEnterVehicle event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerEnterVehicle] - Name of the event
+   * @param {number} playerid - ID of the player who attempts to enter a vehicle
+   * @param {number} vehicleid - ID of the vehicle the player is attempting to enter
+   * @param {number} ispassenger - 0 if entering as driver. 1 if entering as passenger
+   * @summary This callback is called when a player starts to enter a vehicle, meaning the player is not in vehicle yet at the time this callback is called.
+   * @see OnPlayerExitVehicle
+   * @see OnPlayerStateChange
+   * @see PutPlayerInVehicle
+   * @see GetPlayerVehicleSeat
+   * @remarks This callback is called when a player BEGINS to enter a vehicle, not when they HAVE entered it. See OnPlayerStateChange. 
+   * @remarks This callback is still called if the player is denied entry to the vehicle (e.g. it is locked or full). 
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerEnterVehicle'): void;
+  static fire(eventName: 'OnPlayerEnterVehicle', playerid: number, vehicleid: number, ispassenger: number): void;
   /**
    * Triggers the OnPlayerExitVehicle event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerExitVehicle] - Name of the event
+   * @param {number} playerid - The ID of the player that is exiting a vehicle
+   * @param {number} vehicleid - The ID of the vehicle the player is exiting
+   * @summary This callback is called when a player starts to exit a vehicle.
+   * @see OnPlayerEnterVehicle
+   * @see OnPlayerStateChange
+   * @see RemovePlayerFromVehicle
+   * @see GetPlayerVehicleSeat
+   * @remarks Not called if the player falls off a bike or is removed from a vehicle by other means such as using SetPlayerPos.
+   * @remarks You must use OnPlayerStateChange and check if their old state is PLAYER_STATE_DRIVER or PLAYER_STATE_PASSENGER and their new state is PLAYER_STATE_ONFOOT.
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerExitVehicle'): void;
+  static fire(eventName: 'OnPlayerExitVehicle', playerid: number, vehicleid: number): void;
   /**
    * Triggers the OnPlayerStateChange event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerStateChange] - Name of the event
+   * @param {number} playerid - The ID of the player that changed state
+   * @param {number} newstate - The player&#x27;s new state
+   * @param {number} oldstate - The player&#x27;s previous state
+   * @summary This callback is called when a player changes state. For example, when a player changes from being the driver of a vehicle to being on-foot.
+   * @see OnPlayerInteriorChange
+   * @see GetPlayerState
+   * @see GetPlayerSpecialAction
+   * @see SetPlayerSpecialAction
+   * @remarks This callback can also be called by NPC.
+   * @remarks 
+  States:
+  
+    PLAYER_STATE_NONE - empty (while initializing)
+    PLAYER_STATE_ONFOOT - player is on foot
+    PLAYER_STATE_DRIVER - player is the driver of a vehicle
+    PLAYER_STATE_PASSENGER - player is passenger of a vehicle
+    PLAYER_STATE_WASTED - player is dead or on class selection
+    PLAYER_STATE_SPAWNED - player is spawned
+    PLAYER_STATE_SPECTATING - player is spectating
+    PLAYER_STATE_EXIT_VEHICLE - player exits a vehicle
+    PLAYER_STATE_ENTER_VEHICLE_DRIVER - player enters a vehicle as driver
+    PLAYER_STATE_ENTER_VEHICLE_PASSENGER - player enters a vehicle as passenger 
+  
+
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerStateChange'): void;
+  static fire(eventName: 'OnPlayerStateChange', playerid: number, newstate: number, oldstate: number): void;
   /**
    * Triggers the OnPlayerEnterCheckpoint event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerEnterCheckpoint] - Name of the event
+   * @param {number} playerid - The player who entered the checkpoint
+   * @summary This callback is called when a player enters the checkpoint set for that player.
+   * @see OnPlayerLeaveCheckpoint
+   * @see OnPlayerEnterRaceCheckpoint
+   * @see OnPlayerLeaveRaceCheckpoint
+   * @see SetPlayerCheckpoint
+   * @see DisablePlayerCheckpoint
+   * @see IsPlayerInCheckpoint
+   * @see SetPlayerRaceCheckpoint
+   * @see DisablePlayerRaceCheckpoint
+   * @see IsPlayerInRaceCheckpoint
+   * @remarks This callback can also be called by NPC.
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerEnterCheckpoint'): void;
+  static fire(eventName: 'OnPlayerEnterCheckpoint', playerid: number): void;
   /**
    * Triggers the OnPlayerLeaveCheckpoint event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerLeaveCheckpoint] - Name of the event
+   * @param {number} playerid - The ID of the player that left their checkpoint
+   * @summary This callback is called when a player leaves the checkpoint set for them by SetPlayerCheckpoint. Only one checkpoint can be set at a time.
+   * @see OnPlayerEnterCheckpoint
+   * @see OnPlayerEnterRaceCheckpoint
+   * @see OnPlayerLeaveRaceCheckpoint
+   * @see SetPlayerCheckpoint
+   * @see DisablePlayerCheckpoint
+   * @see IsPlayerInCheckpoint
+   * @see SetPlayerRaceCheckpoint
+   * @see DisablePlayerRaceCheckpoint
+   * @see IsPlayerInRaceCheckpoint
+   * @remarks This callback can also be called by NPC.
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerLeaveCheckpoint'): void;
+  static fire(eventName: 'OnPlayerLeaveCheckpoint', playerid: number): void;
   /**
    * Triggers the OnPlayerEnterRaceCheckpoint event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerEnterRaceCheckpoint] - Name of the event
+   * @param {number} playerid - The ID of the player who entered the race checkpoint
+   * @summary This callback is called when a player enters a race checkpoint.
+   * @see OnPlayerEnterCheckpoint
+   * @see OnPlayerLeaveCheckpoint
+   * @see OnPlayerLeaveRaceCheckpoint
+   * @see SetPlayerCheckpoint
+   * @see DisablePlayerCheckpoint
+   * @see IsPlayerInCheckpoint
+   * @see SetPlayerRaceCheckpoint
+   * @see DisablePlayerRaceCheckpoint
+   * @see IsPlayerInRaceCheckpoint
+   * @remarks This callback can also be called by NPC.
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerEnterRaceCheckpoint'): void;
+  static fire(eventName: 'OnPlayerEnterRaceCheckpoint', playerid: number): void;
   /**
    * Triggers the OnPlayerLeaveRaceCheckpoint event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerLeaveRaceCheckpoint] - Name of the event
+   * @param {number} playerid - The ID of the player that left the race checkpoint
+   * @summary This callback is called when a player leaves the race checkpoint.
+   * @see OnPlayerEnterCheckpoint
+   * @see OnPlayerLeaveCheckpoint
+   * @see OnPlayerEnterRaceCheckpoint
+   * @see SetPlayerCheckpoint
+   * @see DisablePlayerCheckpoint
+   * @see IsPlayerInCheckpoint
+   * @see SetPlayerRaceCheckpoint
+   * @see DisablePlayerRaceCheckpoint
+   * @see IsPlayerInRaceCheckpoint
+   * @remarks This callback can also be called by NPC.
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerLeaveRaceCheckpoint'): void;
+  static fire(eventName: 'OnPlayerLeaveRaceCheckpoint', playerid: number): void;
   /**
    * Triggers the OnRconCommand event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnRconCommand] - Name of the event
+   * @param {string} cmd - A string containing the command that was typed, as well as any passed parameters
+   * @summary This callback is called when a command is sent through the server console, remote RCON, or via the in-game &quot;/rcon command&quot;.
+   * @see IsPlayerAdmin
+   * @see OnRconLoginAttempt
+   * @remarks You will need to include this callback in a loaded filterscript for it to work in the gamemode!
+   * @remarks &quot;/rcon&quot; is not included in &quot;cmd&quot; when a player types a command. 
+   * @remarks If you use the print function here, it will send a message to the player who typed the command in-game as well as the log.
+   * @remarks This callback is not called when the player is not logged in as RCON admin. 
+   * @remarks When the player is not logged in as RCON admin and uses /rcon login, this callback will not be called and OnRconLoginAttempt is called instead. However, when the player is logged in as RCON admin, the use of this command will call this callback. 
    * @returns {void}
    */
-  static fire(eventName: 'OnRconCommand'): void;
+  static fire(eventName: 'OnRconCommand', cmd: string): void;
   /**
    * Triggers the OnPlayerRequestSpawn event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerRequestSpawn] - Name of the event
+   * @param {number} playerid - The ID of the player that requested to spawn
+   * @summary Called when a player attempts to spawn via class selection either by pressing SHIFT or clicking the &#x27;Spawn&#x27; button.
+   * @see OnPlayerSpawn
+   * @see OnPlayerRequestClass
+   * @remarks This callback can also be called by NPC.
+   * @remarks To prevent players from spawning with certain classes, the last viewed class must be saved in a variable in OnPlayerRequestClass.
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerRequestSpawn'): void;
+  static fire(eventName: 'OnPlayerRequestSpawn', playerid: number): void;
   /**
    * Triggers the OnObjectMoved event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnObjectMoved] - Name of the event
+   * @param {number} objectid - The ID of the object that was moved
+   * @summary This callback is called when an object is moved after MoveObject (when it stops moving).
+   * @see MoveObject
+   * @see IsObjectMoving
+   * @see StopObject
+   * @see OnPlayerObjectMoved
+   * @remarks SetObjectPos does not work when used in this callback. To fix it, recreate the object.
    * @returns {void}
    */
-  static fire(eventName: 'OnObjectMoved'): void;
+  static fire(eventName: 'OnObjectMoved', objectid: number): void;
   /**
    * Triggers the OnPlayerObjectMoved event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerObjectMoved] - Name of the event
+   * @param {number} playerid - The playerid the object is assigned to
+   * @param {number} objectid - The ID of the player object that was moved
+   * @summary This callback is called when a player object is moved after MovePlayerObject (when it stops moving).
+   * @see OnObjectMoved
+   * @see MovePlayerObject
+   * @see IsPlayerObjectMoving
+   * @see StopPlayerObject
+   * @remarks This callback can also be called for NPC.
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerObjectMoved'): void;
+  static fire(eventName: 'OnPlayerObjectMoved', playerid: number, objectid: number): void;
   /**
    * Triggers the OnPlayerPickUpPickup event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerPickUpPickup] - Name of the event
+   * @param {number} playerid - The ID of the player that picked up the pickup
+   * @param {number} pickupid - The ID of the pickup, returned by CreatePickup
+   * @summary Called when a player picks up a pickup created with CreatePickup.
+   * @see CreatePickup
+   * @see DestroyPickup
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerPickUpPickup'): void;
+  static fire(eventName: 'OnPlayerPickUpPickup', playerid: number, pickupid: number): void;
   /**
    * Triggers the OnVehicleMod event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnVehicleMod] - Name of the event
+   * @param {number} playerid - The ID of the driver of the vehicle
+   * @param {number} vehicleid - The ID of the vehicle which is modded
+   * @param {number} componentid - The ID of the component which was added to the vehicle
+   * @summary This callback is called when a vehicle is modded.
+   * @see AddVehicleComponent
+   * @see OnEnterExitModShop
+   * @see OnVehiclePaintjob
+   * @see OnVehicleRespray
+   * @remarks This callback is NOT called by AddVehicleComponent.
    * @returns {void}
    */
-  static fire(eventName: 'OnVehicleMod'): void;
+  static fire(eventName: 'OnVehicleMod', playerid: number, vehicleid: number, componentid: number): void;
   /**
    * Triggers the OnEnterExitModShop event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnEnterExitModShop] - Name of the event
+   * @param {number} playerid - The ID of the player that entered or exited the modshop
+   * @param {number} enterexit - 1 if the player entered or 0 if they exited
+   * @param {number} interiorid - The interior ID of the modshop that the player is entering (or 0 if exiting)
+   * @summary This callback is called when a player enters or exits a mod shop.
+   * @see OnVehicleMod
+   * @see OnVehicleRespray
+   * @see OnVehiclePaintjob
+   * @see AddVehicleComponent
+   * @remarks This callback was added in SA-MP 0.3a and will not work in earlier versions!
+   * @remarks Players collide when they get into the same mod shop.
    * @returns {void}
    */
-  static fire(eventName: 'OnEnterExitModShop'): void;
+  static fire(eventName: 'OnEnterExitModShop', playerid: number, enterexit: number, interiorid: number): void;
   /**
    * Triggers the OnVehiclePaintjob event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnVehiclePaintjob] - Name of the event
+   * @param {number} playerid - The ID of the player that changed the paintjob of their vehicle
+   * @param {number} vehicleid - The ID of the vehicle that had its paintjob changed
+   * @param {number} paintjobid - The ID of the new paintjob
+   * @summary Called when a player previews a vehicle paintjob inside a mod shop. Watch out, this callback is not called when the player buys the paintjob.
+   * @see ChangeVehiclePaintjob
+   * @see ChangeVehicleColor
+   * @see OnVehicleRespray
+   * @see OnVehicleMod
+   * @remarks This callback is not called by ChangeVehiclePaintjob.
    * @returns {void}
    */
-  static fire(eventName: 'OnVehiclePaintjob'): void;
+  static fire(eventName: 'OnVehiclePaintjob', playerid: number, vehicleid: number, paintjobid: number): void;
   /**
    * Triggers the OnVehicleRespray event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnVehicleRespray] - Name of the event
+   * @param {number} playerid - The ID of the player that is driving the vehicle
+   * @param {number} vehicleid - The ID of the vehicle that was resprayed
+   * @param {number} color1 - The color that the vehicle&#x27;s primary color was changed to
+   * @param {number} color2 - The color that the vehicle&#x27;s secondary color was changed to
+   * @summary This callback is called when a player exits a mod shop, even if the colors weren&#x27;t changed. Watch out, the name is ambiguous, Pay &#x27;n&#x27; Spray shops don&#x27;t call this callback.
+   * @see ChangeVehicleColor
+   * @see ChangeVehiclePaintjob
+   * @see OnVehiclePaintjob
+   * @see OnVehicleMod
+   * @see OnEnterExitModShop
+   * @remarks Previewing a component inside a mod shop might call this callback.
+   * @remarks This callback is not called by ChangeVehicleColor.
    * @returns {void}
    */
-  static fire(eventName: 'OnVehicleRespray'): void;
+  static fire(eventName: 'OnVehicleRespray', playerid: number, vehicleid: number, color1: number, color2: number): void;
   /**
    * Triggers the OnVehicleDamageStatusUpdate event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnVehicleDamageStatusUpdate] - Name of the event
+   * @param {number} vehicleid - The ID of the vehicle that was changed its damage status
+   * @param {number} playerid - The ID of the player who synced the change in the damage status (who had the car damaged or repaired)
+   * @summary This callback is called when a vehicle element such as doors, tires, panels, or lights change their damage status.
+   * @see GetVehicleDamageStatus
+   * @see UpdateVehicleDamageStatus
+   * @remarks This callback was added in SA-MP 0.3a and will not work in earlier versions!
+   * @remarks This does not include vehicle health changes
    * @returns {void}
    */
-  static fire(eventName: 'OnVehicleDamageStatusUpdate'): void;
+  static fire(eventName: 'OnVehicleDamageStatusUpdate', vehicleid: number, playerid: number): void;
   /**
    * Triggers the OnUnoccupiedVehicleUpdate event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnUnoccupiedVehicleUpdate] - Name of the event
+   * @param {number} vehicleid - The ID of the vehicle that&#x27;s position was updated
+   * @param {number} playerid - The ID of the player that sent a vehicle position sync update
+   * @param {number} passenger_seat - The ID of the seat if the player is a passenger. 0&#x3D;not in vehicle, 1&#x3D;front passenger, 2&#x3D;backleft 3&#x3D;backright 4+ is for coach/bus etc. with many passenger seats
+   * @param {number} new_x - The new X coordinate of the vehicle. This parameter was added in 0.3z. Leave it out if using an earlier version
+   * @param {number} new_y - The new Y coordinate of the vehicle. This parameter was added in 0.3z. Leave it out if using an earlier version
+   * @param {number} new_z - The new Z coordinate of the vehicle. This parameter was added in 0.3z. Leave it out if using an earlier version
+   * @param {number} vel_x - The new X velocity of the vehicle. This parameter was added in 0.3z R4. Leave it out if using an earlier version
+   * @param {number} vel_y - The new Y velocity of the vehicle. This parameter was added in 0.3z R4. Leave it out if using an earlier version
+   * @param {number} vel_z - The new Z velocity of the vehicle. This parameter was added in 0.3z R4. Leave it out if using an earlier version
+   * @summary This callback is called when a player&#x27;s client updates/syncs the position of a vehicle they&#x27;re not driving. This can happen outside of the vehicle or when the player is a passenger of a vehicle that has no driver.
+   * @see OnTrailerUpdate
+   * @remarks This callback was added in SA-MP 0.3c R3 and will not work in earlier versions!
+   * @remarks This callback is called very frequently per second per unoccupied vehicle. You should refrain from implementing intensive calculations or intensive file writing/reading operations in this callback.
+   * @remarks GetVehiclePos will return the old coordinates of the vehicle before this update.
    * @returns {void}
    */
-  static fire(eventName: 'OnUnoccupiedVehicleUpdate'): void;
+  static fire(eventName: 'OnUnoccupiedVehicleUpdate', vehicleid: number, playerid: number, passenger_seat: number, new_x: number, new_y: number, new_z: number, vel_x: number, vel_y: number, vel_z: number): void;
   /**
    * Triggers the OnPlayerSelectedMenuRow event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerSelectedMenuRow] - Name of the event
+   * @param {number} playerid - The ID of the player that selected a menu item
+   * @param {number} row - The ID of the row that was selected. The first row is ID 0
+   * @summary This callback is called when a player selects an item from a menu (ShowMenuForPlayer).
+   * @see OnPlayerExitedMenu
+   * @see OnDialogResponse
+   * @see CreateMenu
+   * @see DestroyMenu
+   * @see AddMenuItem
+   * @see ShowMenuForPlayer
+   * @see HideMenuForPlayer
+   * @remarks The menu ID is not passed to this callback. GetPlayerMenu must be used to determine which menu the player selected an item on.
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerSelectedMenuRow'): void;
+  static fire(eventName: 'OnPlayerSelectedMenuRow', playerid: number, row: number): void;
   /**
    * Triggers the OnPlayerExitedMenu event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerExitedMenu] - Name of the event
+   * @param {number} playerid - The ID of the player that exited the menu
+   * @summary Called when a player exits a menu.
+   * @see OnPlayerSelectedMenuRow
+   * @see CreateMenu
+   * @see DestroyMenu
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerExitedMenu'): void;
+  static fire(eventName: 'OnPlayerExitedMenu', playerid: number): void;
   /**
    * Triggers the OnPlayerInteriorChange event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerInteriorChange] - Name of the event
+   * @param {number} playerid - The playerid who changed interior
+   * @param {number} newinteriorid - The interior the player is now in
+   * @param {number} oldinteriorid - The interior the player was in before
+   * @summary Called when a player changes interior. Can be triggered by SetPlayerInterior or when a player enter/exits a building.
+   * @see SetPlayerInterior
+   * @see GetPlayerInterior
+   * @see LinkVehicleToInterior
+   * @see OnPlayerStateChange
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerInteriorChange'): void;
+  static fire(eventName: 'OnPlayerInteriorChange', playerid: number, newinteriorid: number, oldinteriorid: number): void;
   /**
    * Triggers the OnPlayerKeyStateChange event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerKeyStateChange] - Name of the event
+   * @param {number} playerid - The ID of the player that pressed or released a key
+   * @param {number} newkeys - A map (bitmask) of the keys currently held - see here
+   * @param {number} oldkeys - A map (bitmask) of the keys held prior to the current change - see here
+   * @summary This callback is called when the state of any supported key is changed (pressed/released). Directional keys do not trigger OnPlayerKeyStateChange (up/down/left/right).
+   * @see GetPlayerKeys
+   * @remarks This callback can also be called by NPC.
+   * @remarks 
+  Useful macros:
+  
+    // HOLDING(keys)
+    #define HOLDING(%0) ((newkeys &amp; (%0)) &#x3D;&#x3D; (%0))
+    
+    // PRESSED(keys)
+    #define PRESSED(%0) (((newkeys &amp; (%0)) &#x3D;&#x3D; (%0)) &amp;&amp; ((oldkeys &amp; (%0)) !&#x3D; (%0)))
+    
+    // PRESSING(keyVariable, keys)
+    #define PRESSING(%0,%1) (%0 &amp; (%1))
+    
+    // RELEASED(keys)
+    #define RELEASED(%0) (((newkeys &amp; (%0)) !&#x3D; (%0)) &amp;&amp; ((oldkeys &amp; (%0)) &#x3D;&#x3D; (%0)))
+  
+
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerKeyStateChange'): void;
+  static fire(eventName: 'OnPlayerKeyStateChange', playerid: number, newkeys: number, oldkeys: number): void;
   /**
    * Triggers the OnRconLoginAttempt event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnRconLoginAttempt] - Name of the event
+   * @param {string} ip - The IP of the player that tried to log in to RCON
+   * @param {string} password - The password used to login with
+   * @param {number} success - 0 if the password was incorrect or 1 if it was correct
+   * @summary This callback is called when someone attempts to log in to RCON in-game; successful or not.
+   * @see OnRconCommand
+   * @see IsPlayerAdmin
+   * @see SendRconCommand
+   * @remarks This callback was added in SA-MP 0.3a and will not work in earlier versions!
+   * @remarks This callback is only called when /rcon login is used in-game. 
+   * @remarks This callback is only called when the player is not yet logged in. When the player is logged in, OnRconCommand is called instead.
    * @returns {void}
    */
-  static fire(eventName: 'OnRconLoginAttempt'): void;
+  static fire(eventName: 'OnRconLoginAttempt', ip: string, password: string, success: number): void;
   /**
    * Triggers the OnPlayerUpdate event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerUpdate] - Name of the event
+   * @param {number} playerid - 
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerUpdate'): void;
+  static fire(eventName: 'OnPlayerUpdate', playerid: number): void;
   /**
    * Triggers the OnPlayerStreamIn event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerStreamIn] - Name of the event
+   * @param {number} playerid - The ID of the player who has been streamed
+   * @param {number} forplayerid - The ID of the player that streamed the other player in
+   * @summary This callback is called when a player is streamed by some other player&#x27;s client.
+   * @see OnPlayerStreamOut
+   * @see OnActorStreamIn
+   * @see OnVehicleStreamIn
+   * @remarks This callback was added in SA-MP 0.3a and will not work in earlier versions!
+   * @remarks This callback can also be called by NPC.
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerStreamIn'): void;
+  static fire(eventName: 'OnPlayerStreamIn', playerid: number, forplayerid: number): void;
   /**
    * Triggers the OnPlayerStreamOut event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerStreamOut] - Name of the event
+   * @param {number} playerid - The player who has been destreamed
+   * @param {number} forplayerid - The player who has destreamed the other player
+   * @summary This callback is called when a player is streamed out from some other player&#x27;s client.
+   * @see OnPlayerStreamIn
+   * @see OnActorStreamOut
+   * @see OnVehicleStreamOut
+   * @remarks This callback was added in SA-MP 0.3a and will not work in earlier versions!
+   * @remarks This callback can also be called by NPC.
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerStreamOut'): void;
+  static fire(eventName: 'OnPlayerStreamOut', playerid: number, forplayerid: number): void;
   /**
    * Triggers the OnVehicleStreamIn event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnVehicleStreamIn] - Name of the event
+   * @param {number} vehicleid - The ID of the vehicle that streamed in for the player
+   * @param {number} forplayerid - The ID of the player who the vehicle streamed in for
+   * @summary Called when a vehicle is streamed to a player&#x27;s client.
+   * @see OnVehicleStreamOut
+   * @see OnPlayerStreamIn
+   * @see OnPlayerStreamOut
+   * @remarks This callback was added in SA-MP 0.3a and will not work in earlier versions!
+   * @remarks This callback can also be called by NPC.
    * @returns {void}
    */
-  static fire(eventName: 'OnVehicleStreamIn'): void;
+  static fire(eventName: 'OnVehicleStreamIn', vehicleid: number, forplayerid: number): void;
   /**
    * Triggers the OnVehicleStreamOut event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnVehicleStreamOut] - Name of the event
+   * @param {number} vehicleid - The ID of the vehicle that streamed out
+   * @param {number} forplayerid - The ID of the player who is no longer streaming the vehicle
+   * @summary This callback is called when a vehicle is streamed out for a player&#x27;s client (it&#x27;s so far away that they can&#x27;t see it).
+   * @see OnVehicleStreamIn
+   * @see OnPlayerStreamIn
+   * @see OnPlayerStreamOut
+   * @remarks This callback was added in SA-MP 0.3a and will not work in earlier versions!
+   * @remarks This callback can also be called by NPC.
    * @returns {void}
    */
-  static fire(eventName: 'OnVehicleStreamOut'): void;
+  static fire(eventName: 'OnVehicleStreamOut', vehicleid: number, forplayerid: number): void;
   /**
    * Triggers the OnActorStreamIn event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnActorStreamIn] - Name of the event
+   * @param {number} actorid - The ID of the actor that has been streamed in for the player
+   * @param {number} forplayerid - The ID of the player that streamed the actor in
+   * @summary This callback is called when an actor is streamed in by a player&#x27;s client.
+   * @see OnActorStreamOut
+   * @see OnPlayerStreamIn
+   * @remarks This function was added in SA-MP 0.3.7 and will not work in earlier versions!
+   * @remarks This callback can also be called by NPC.
+   * @remarks It is always called first in filterscripts.
    * @returns {void}
    */
-  static fire(eventName: 'OnActorStreamIn'): void;
+  static fire(eventName: 'OnActorStreamIn', actorid: number, forplayerid: number): void;
   /**
    * Triggers the OnActorStreamOut event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnActorStreamOut] - Name of the event
+   * @param {number} actorid - The ID of the actor that has been streamed out for the player
+   * @param {number} forplayerid - The ID of the player that streamed the actor out
+   * @summary This callback is called when an actor is streamed out by a player&#x27;s client.
+   * @see OnActorStreamIn
+   * @see OnPlayerStreamOut
+   * @remarks This function was added in SA-MP 0.3.7 and will not work in earlier versions!
+   * @remarks This callback can also be called by NPC.
+   * @remarks It is always called first in filterscripts.
    * @returns {void}
    */
-  static fire(eventName: 'OnActorStreamOut'): void;
+  static fire(eventName: 'OnActorStreamOut', actorid: number, forplayerid: number): void;
   /**
    * Triggers the OnDialogResponse event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnDialogResponse] - Name of the event
+   * @param {number} playerid - The ID of the player that responded to the dialog
+   * @param {number} dialogid - The ID of the dialog the player responded to, assigned in ShowPlayerDialog
+   * @param {number} response - 1 for left button and 0 for right button (if only one button shown, always 1)
+   * @param {number} listitem - The ID of the list item selected by the player (starts at 0) (only if using a list style dialog)
+   * @param {string} inputtext - The text entered into the input box by the player or the selected list item text
+   * @summary This callback is called when a player responds to a dialog shown using ShowPlayerDialog by either clicking a button, pressing ENTER/ESC or double-clicking a list item (if using a list style dialog).
+   * @see ShowPlayerDialog
+   * @remarks This callback was added in SA-MP 0.3a and will not work in earlier versions!
+   * @remarks A player&#x27;s dialog doesn&#x27;t hide when the gamemode restarts, causing the server to print &quot;Warning: PlayerDialogResponse PlayerId: 0 dialog ID doesn&#x27;t match last sent dialog ID&quot; if a player responded to this dialog after restart.
+   * @remarks Parameters can contain different values, based on dialog&#x27;s style.
    * @returns {void}
    */
-  static fire(eventName: 'OnDialogResponse'): void;
+  static fire(eventName: 'OnDialogResponse', playerid: number, dialogid: number, response: number, listitem: number, inputtext: string): void;
   /**
    * Triggers the OnPlayerTakeDamage event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerTakeDamage] - Name of the event
+   * @param {number} playerid - The ID of the player that took damage
+   * @param {number} issuerid - The ID of the player that caused the damage. INVALID_PLAYER_ID if self-inflicted
+   * @param {number} amount - The amount of damage the player took (health and armour combined)
+   * @param {number} weaponid - The ID of the weapon/reason for the damage
+   * @param {number} bodypart - The body part that was hit. (NOTE: This parameter was added in 0.3z. Leave it out if using an older version!)
+   * @summary This callback is called when a player takes damage.
+   * @see OnPlayerGiveDamage
+   * @see OnPlayerWeaponShot
+   * @remarks This callback was added in SA-MP 0.3d and will not work in earlier versions!
+   * @remarks GetPlayerHealth and GetPlayerArmour will return the old amounts of the player before this callback. 
+   * @remarks 
+  The weaponid will return 37 (flame thrower) from any fire sources (e.g. molotov, 18).
+  The weaponid will return 51 from any weapon that creates an explosion (e.g. RPG, grenade)
+  playerid is the only one who can call the callback.
+  The amount is always the maximum damage the weaponid can do, even when the health left is less than that maximum damage. So when a player has 100.0 health and gets shot with a Desert Eagle which has a damage value of 46.2, it takes 3 shots to kill that player. All 3 shots will show an amount of 46.2, even though when the last shot hits, the player only has 7.6 health left.
+
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerTakeDamage'): void;
+  static fire(eventName: 'OnPlayerTakeDamage', playerid: number, issuerid: number, amount: number, weaponid: number, bodypart: number): void;
   /**
    * Triggers the OnPlayerGiveDamage event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerGiveDamage] - Name of the event
+   * @param {number} playerid - The ID of the player that gave damage
+   * @param {number} damagedid - The ID of the player that received damage
+   * @param {number} amount - The amount of health/armour damagedid has lost (combined)
+   * @param {number} weaponid - The reason that caused the damage
+   * @param {number} bodypart - The body part that was hit. (NOTE: This parameter was added in 0.3z. Leave it out if using an older version!)
+   * @summary This callback is called when a player gives damage to another player.
+   * @see OnPlayerTakeDamage
+   * @remarks This callback was added in SA-MP 0.3d and will not work in earlier versions!
+   * @remarks 
+  Keep in mind this function can be inaccurate in some cases.
+  If you want to prevent certain players from damaging eachother, use SetPlayerTeam.
+  The weaponid will return 37 (flame thrower) from any fire sources (e.g. molotov, 18)
+  The weaponid will return 51 from any weapon that creates an explosion (e.g. RPG, grenade)
+  playerid is the only one who can call the callback.
+  The amount is always the maximum damage the weaponid can do, even when the health left is less than that maximum damage. So when a player has 100.0 health and gets shot with a Desert Eagle which has a damage value of 46.2, it takes 3 shots to kill that player. All 3 shots will show an amount of 46.2, even though when the last shot hits, the player only has 7.6 health left.
+
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerGiveDamage'): void;
+  static fire(eventName: 'OnPlayerGiveDamage', playerid: number, damagedid: number, amount: number, weaponid: number, bodypart: number): void;
   /**
    * Triggers the OnPlayerGiveDamageActor event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerGiveDamageActor] - Name of the event
+   * @param {number} playerid - The ID of the player that gave damage
+   * @param {number} damaged_actorid - The ID of the actor that received damage
+   * @param {number} amount - The amount of health/armour damaged_actorid has lost
+   * @param {number} weaponid - The reason that caused the damage
+   * @param {number} bodypart - The body part that was hit
+   * @summary This callback is called when a player gives damage to an actor.
+   * @see CreateActor
+   * @see SetActorInvulnerable
+   * @see SetActorHealth
+   * @see GetActorHealth
+   * @see IsActorInvulnerable
+   * @see IsValidActor
+   * @see OnActorStreamOut
+   * @see OnPlayerStreamIn
+   * @remarks This callback was added in SA-MP 0.3.7 and will not work in earlier versions!
+   * @remarks This function does not get called if the actor is set invulnerable (WHICH IS BY DEFAULT). See SetActorInvulnerable.
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerGiveDamageActor'): void;
+  static fire(eventName: 'OnPlayerGiveDamageActor', playerid: number, damaged_actorid: number, amount: number, weaponid: number, bodypart: number): void;
   /**
    * Triggers the OnPlayerClickMap event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerClickMap] - Name of the event
+   * @param {number} playerid - The ID of the player that placed a target/waypoint
+   * @param {number} fX - The X float coordinate where the player clicked
+   * @param {number} fY - The Y float coordinate where the player clicked
+   * @param {number} fZ - The Z float coordinate where the player clicked (inaccurate - see note below)
+   * @summary OnPlayerClickMap is called when a player places a target/waypoint on the pause menu map (by right-clicking).
+   * @see SetPlayerPos
+   * @see SetPlayerPosFindZ
+   * @see GetPlayerPos
+   * @remarks This callback was added in SA-MP 0.3d and will not work in earlier versions!
+   * @remarks The Z value returned will be 0 (invalid) if it is far away from the player; use the MapAndreas plugin to get a more accurate Z coordinate.
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerClickMap'): void;
+  static fire(eventName: 'OnPlayerClickMap', playerid: number, fX: number, fY: number, fZ: number): void;
   /**
    * Triggers the OnPlayerClickTextDraw event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerClickTextDraw] - Name of the event
+   * @param {number} playerid - The ID of the player that clicked on the textdraw
+   * @param {number} clickedid - The ID of the clicked textdraw. INVALID_TEXT_DRAW if selection was cancelled
+   * @summary This callback is called when a player clicks on a textdraw or cancels the select mode with the Escape key.
+   * @see OnPlayerClickPlayerTextDraw
+   * @see OnPlayerClickPlayer
+   * @remarks This callback was added in SA-MP 0.3e and will not work in earlier versions!
+   * @remarks The clickable area is defined by TextDrawTextSize. The x and y parameters passed to that function must not be zero or negative. 
+   * @remarks Do not use CancelSelectTextDraw unconditionally within this callback. This results in an infinite loop. 
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerClickTextDraw'): void;
+  static fire(eventName: 'OnPlayerClickTextDraw', playerid: number, clickedid: number): void;
   /**
    * Triggers the OnPlayerClickPlayerTextDraw event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerClickPlayerTextDraw] - Name of the event
+   * @param {number} playerid - The ID of the player that selected a textdraw
+   * @param {number} playertextid - The ID of the player-textdraw that the player selected
+   * @summary This callback is called when a player clicks on a player-textdraw. It is not called when player cancels the select mode (ESC) - however, OnPlayerClickTextDraw is.
+   * @see PlayerTextDrawSetSelectable
+   * @see OnPlayerClickTextDraw
+   * @see OnPlayerClickPlayer
+   * @remarks This callback was added in SA-MP 0.3e and will not work in earlier versions!
+   * @remarks When a player presses ESC to cancel selecting a textdraw, OnPlayerClickTextDraw is called with a textdraw ID of INVALID_TEXT_DRAW. OnPlayerClickPlayerTextDraw won&#x27;t be called also.
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerClickPlayerTextDraw'): void;
+  static fire(eventName: 'OnPlayerClickPlayerTextDraw', playerid: number, playertextid: number): void;
   /**
    * Triggers the OnIncomingConnection event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnIncomingConnection] - Name of the event
+   * @param {number} playerid - The ID of the player attempting to connect
+   * @param {string} ip_address - The IP address of the player attempting to connect
+   * @param {number} port - The port of the attempted connection
+   * @summary This callback is called when an IP address attempts a connection to the server. To block incoming connections, use BlockIpAddress.
+   * @see OnPlayerConnect
+   * @see OnPlayerDisconnect
+   * @see OnPlayerFinishedDownloading
+   * @see BlockIpAddress
+   * @see UnBlockIpAddress
+   * @remarks  	This callback was added in SA-MP 0.3z R2-2 and will not work in earlier versions!
    * @returns {void}
    */
-  static fire(eventName: 'OnIncomingConnection'): void;
+  static fire(eventName: 'OnIncomingConnection', playerid: number, ip_address: string, port: number): void;
   /**
    * Triggers the OnTrailerUpdate event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnTrailerUpdate] - Name of the event
+   * @param {number} playerid - The ID of the player who sent a trailer update
+   * @param {number} vehicleid - The Trailer being updated
+   * @summary This callback is called when a player sent a trailer update.
+   * @see OnUnoccupiedVehicleUpdate
+   * @see GetVehicleTrailer
+   * @see IsTrailerAttachedToVehicle
+   * @see AttachTrailerToVehicle
+   * @see DetachTrailerFromVehicle
+   * @remarks This callback was added in SA-MP 0.3z R4 and will not work in earlier versions!
+   * @remarks This callback is called very frequently per second per trailer. You should refrain from implementing intensive calculations or intensive file writing/reading operations in this callback. 
    * @returns {void}
    */
-  static fire(eventName: 'OnTrailerUpdate'): void;
+  static fire(eventName: 'OnTrailerUpdate', playerid: number, vehicleid: number): void;
   /**
    * Triggers the OnVehicleSirenStateChange event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnVehicleSirenStateChange] - Name of the event
+   * @param {number} playerid - The ID of the player that toggled the siren (driver)
+   * @param {number} vehicleid - The ID of the vehicle of which the siren was toggled for
+   * @param {number} newstate - 0 if siren was turned off, 1 if siren was turned on
+   * @summary This callback is called when a vehicle&#x27;s siren is toggled.
+   * @see GetVehicleParamsSirenState
+   * @remarks This callback was added in SA-MP 0.3.7 and will not work in earlier versions!
+   * @remarks This callback can also be called by NPC.
+   * @remarks This callback is only called when a vehicle&#x27;s siren is toggled on or off, NOT when the alternate siren is in use (holding horn).
    * @returns {void}
    */
-  static fire(eventName: 'OnVehicleSirenStateChange'): void;
+  static fire(eventName: 'OnVehicleSirenStateChange', playerid: number, vehicleid: number, newstate: number): void;
   /**
    * Triggers the OnPlayerFinishedDownloading event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerFinishedDownloading] - Name of the event
+   * @param {number} playerid - The ID of the player that finished downloading custom models
+   * @param {number} virtualworld - The ID of the virtual world the player finished downloading custom models for
+   * @summary This callback is called when a player finishes downloading custom models. For more information on how to add custom models to your server, see the release thread and this tutorial.
+   * @see OnPlayerConnect
+   * @see OnPlayerDisconnect
+   * @see OnIncomingConnection
+   * @remarks This callback was added in SA-MP 0.3DL and will not work in earlier versions!
+   * @remarks This callback is called every time a player changes virtual worlds, even if there are no custom models present in that world.
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerFinishedDownloading'): void;
+  static fire(eventName: 'OnPlayerFinishedDownloading', playerid: number, virtualworld: number): void;
   /**
    * Triggers the OnPlayerClickPlayer event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerClickPlayer] - Name of the event
+   * @param {number} playerid - The ID of the player that clicked on a player on the scoreboard
+   * @param {number} clickedplayerid - The ID of the player that was clicked on
+   * @param {number} source - The source of the player&#x27;s click
+   * @summary Called when a player double-clicks on a player on the scoreboard.
+   * @see OnPlayerClickTextDraw
+   * @remarks This callback was added in SA-MP 0.3a and will not work in earlier versions!
+   * @remarks There is currently only one  (0 - CLICK_SOURCE_SCOREBOARD). The existence of this argument suggests that more sources may be supported in the future.
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerClickPlayer'): void;
+  static fire(eventName: 'OnPlayerClickPlayer', playerid: number, clickedplayerid: number, source: number): void;
   /**
    * Triggers the OnPlayerSelectObject event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerSelectObject] - Name of the event
+   * @param {number} playerid - The ID of the player that edited an object
+   * @param {number} type - The type of selection
+   * @param {number} objectid - The ID of the edited object
+   * @param {number} modelid - The model of the attached object that was edited
+   * @param {number} fX - The X offset for the object that was edited
+   * @param {number} fY - The Y offset for the object that was edited
+   * @param {number} fZ - The Z offset for the object that was edited
+   * @summary This callback is called when a player finishes editing an object (EditObject/EditPlayerObject).
+   * @summary This callback is called when a player ends attached object edition mode.
+   * @summary This callback is called when a player selects an object after SelectObject has been used.
+   * @see EditObject
+   * @see CreateObject
+   * @see DestroyObject
+   * @see MoveObject
+   * @see EditAttachedObject
+   * @see SetPlayerAttachedObject
+   * @see SelectObject
+   * @remarks This callback was added in SA-MP 0.3e and will not work in earlier versions!
+   * @remarks When using EDIT_RESPONSE_UPDATE be aware that this callback will not be called when releasing an edit in progress resulting in the last update of EDIT_RESPONSE_UPDATE being out of sync of the objects current position.
+   * @remarks This callback was added in SA-MP 0.3e and will not work in earlier versions!
+   * @remarks Editions should be discarded if response was 0 (cancelled). This must be done by storing the offsets etc. in an array BEFORE using EditAttachedObject.
+   * @remarks This function was added in SA-MP 0.3e and will not work in earlier versions!
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerSelectObject'): void;
+  static fire(eventName: 'OnPlayerSelectObject', playerid: number, type: number, objectid: number, modelid: number, fX: number, fY: number, fZ: number): void;
   /**
    * Triggers the OnPlayerWeaponShot event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnPlayerWeaponShot] - Name of the event
+   * @param {number} playerid - The ID of the player that shot a weapon
+   * @param {number} weaponid - The ID of the weapon shot by the player
+   * @param {number} hittype - The type of thing the shot hit (none, player, vehicle, or (player)object)
+   * @param {number} hitid - The ID of the player, vehicle or object that was hit
+   * @param {number} fX - The X coordinate that the shot hit
+   * @param {number} fY - The Y coordinate that the shot hit
+   * @param {number} fZ - The Z coordinate that the shot hit
+   * @summary This callback is called when a player fires a shot from a weapon. Only bullet weapons are supported. Only passenger drive-by is supported (not driver drive-by, and not sea sparrow / hunter shots).
+   * @see OnPlayerGiveDamage
+   * @see GetPlayerLastShotVectors
+   * @remarks This callback was added in SA-MP 0.3z and will not work in earlier versions!
+   * @remarks 
+    BULLET_HIT_TYPE_NONE(0)
+    BULLET_HIT_TYPE_PLAYER(1)
+    BULLET_HIT_TYPE_VEHICLE(2)
+    BULLET_HIT_TYPE_OBJECT(3)
+    BULLET_HIT_TYPE_PLAYER_OBJECT(4)
+
+   * @remarks BULLET_HIT_TYPE_PLAYER is also called for NPCs. Actors are ignored by this callback and detects as BULLET_HIT_TYPE_NONE.
+   * @remarks This callback is only called when lag compensation is enabled. 
+   * @remarks 
+  If hittype is:
+  
+    - BULLET_HIT_TYPE_NONE: the fX, fY and fZ parameters are normal coordinates, will give 0.0 for coordinates if nothing was hit (e.g. far object that the bullet can&#x27;t reach);
+    - Others: the fX, fY and fZ are offsets relative to the hitid.
+  
+
+   * @remarks 
+  Isn&#x27;t called if you fired in vehicle as driver or if you are looking behind with the aim enabled (shooting in air).
+  It is called as BULLET_HIT_TYPE_VEHICLE with the correct hitid (the hit player&#x27;s vehicleid) if you are shooting a player which is in a vehicle. It won&#x27;t be called as BULLET_HIT_TYPE_PLAYER at all.
+  Partially fixed in SA-MP 0.3.7: If fake weapon data is sent by a malicious user, other player clients may freeze or crash. To combat this, check if the reported weaponid can actually fire bullets.
+
+   * @remarks 
+
+   * @remarks GetPlayerLastShotVectors can be used in this callback for more detailed bullet vector information.
    * @returns {void}
    */
-  static fire(eventName: 'OnPlayerWeaponShot'): void;
+  static fire(eventName: 'OnPlayerWeaponShot', playerid: number, weaponid: number, hittype: number, hitid: number, fX: number, fY: number, fZ: number): void;
   /**
    * Triggers the OnClientCheckResponse event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnClientCheckResponse] - Name of the event
+   * @param {number} playerid - The ID of the player checked
+   * @param {number} actionid - The type of check performed
+   * @param {number} memaddr - The address requested
+   * @param {number} retndata - The result of the check
+   * @summary This callback is called when a SendClientCheck request comletes
+   * @see SendClientCheck
    * @returns {void}
    */
-  static fire(eventName: 'OnClientCheckResponse'): void;
+  static fire(eventName: 'OnClientCheckResponse', playerid: number, actionid: number, memaddr: number, retndata: number): void;
   /**
    * Triggers the OnScriptCash event
    *
    * @name samp.fire
-   * @param {string} eventName - Name of the event
+   * @param {string} [eventName=OnScriptCash] - Name of the event
+   * @param {number} playerid - 
+   * @param {number} amount - 
+   * @param {number} source - 
    * @returns {void}
    */
-  static fire(eventName: 'OnScriptCash'): void;
+  static fire(eventName: 'OnScriptCash', playerid: number, amount: number, source: number): void;
   /**
    * Triggers a registered event
    *
    * @name samp.fire
    * @param {string} eventName - Name of the event
+   * @param {...*} args - Event arguments
    * @returns {void}
    */
-  static fire(eventName: string): void;
+  static fire(eventName: string, ...args: Array<any>): void;
 
   /**
    * Calls the AMX native SendClientMessage 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SendClientMessage] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to display the message to
    * @param {number} color - The color of the message (RGBA)
@@ -4755,7 +5340,7 @@ declare class samp {
    * Calls the AMX native SendClientMessageToAll 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SendClientMessageToAll] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} color - The color of the message (RGBA)
    * @param {string} message - The message to show (max 144 characters)
@@ -4770,7 +5355,7 @@ declare class samp {
    * Calls the AMX native SendPlayerMessageToPlayer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SendPlayerMessageToPlayer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player who will receive the message
    * @param {number} senderid - The sender&#x27;s ID. If invalid, the message will not be sent
@@ -4787,7 +5372,7 @@ declare class samp {
    * Calls the AMX native SendPlayerMessageToAll 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SendPlayerMessageToAll] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} senderid - The ID of the sender. If invalid, the message will not be sent
    * @param {string} message - The message that will be sent
@@ -4802,7 +5387,7 @@ declare class samp {
    * Calls the AMX native SendDeathMessage 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SendDeathMessage] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} killer - The ID of the killer (can be INVALID_PLAYER_ID)
    * @param {number} killee - The ID of the player that died
@@ -4820,7 +5405,7 @@ declare class samp {
    * Calls the AMX native SendDeathMessageToPlayer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SendDeathMessageToPlayer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to send the death message to
    * @param {number} killer - The ID of the killer (can be INVALID_PLAYER_ID)
@@ -4840,7 +5425,7 @@ declare class samp {
    * Calls the AMX native GameTextForAll 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GameTextForAll] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {string} string - The text to be displayed
    * @param {number} time - The duration of the text being shown in milliseconds
@@ -4855,7 +5440,7 @@ declare class samp {
    * Calls the AMX native GameTextForPlayer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GameTextForPlayer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to show the gametext for
    * @param {string} string - The text to be displayed
@@ -4874,7 +5459,7 @@ declare class samp {
    * Calls the AMX native SetTimer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetTimer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {string} funcname - Name of the function to call as a string. This must be a public function (forwarded). A null string here will crash the server
    * @param {number} interval - Interval in milliseconds
@@ -4893,7 +5478,7 @@ declare class samp {
    * Calls the AMX native KillTimer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=KillTimer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} timerid - The ID of the timer to kill (returned by SetTimer or SetTimerEx)
    * @summary Kills (stops) a running timer.
@@ -4906,7 +5491,7 @@ declare class samp {
    * Calls the AMX native GetTickCount 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetTickCount] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @summary Returns the uptime of the actual server (not the SA-MP server) in milliseconds.
    * @see tickcount
@@ -4919,7 +5504,7 @@ declare class samp {
    * Calls the AMX native GetMaxPlayers 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetMaxPlayers] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @summary Returns the maximum number of players that can join the server, as set by the server variable &#x27;maxplayers&#x27; in server.cfg.
    * @see GetPlayerPoolSize
@@ -4932,7 +5517,7 @@ declare class samp {
    * Calls the AMX native VectorSize that returns a value with a Float tag
    *
    * @name samp.callNativeFloat
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=VectorSize] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} x - The vector&#x27;s magnitude on the X axis
    * @param {number} y - The vector&#x27;s magnitude on the Y axis
@@ -4949,7 +5534,7 @@ declare class samp {
    * Calls the AMX native asin that returns a value with a Float tag
    *
    * @name samp.callNativeFloat
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=asin] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} value - The sine for which to find the angle for
    * @summary Get the inversed value of a sine in degrees.
@@ -4961,7 +5546,7 @@ declare class samp {
    * Calls the AMX native acos that returns a value with a Float tag
    *
    * @name samp.callNativeFloat
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=acos] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} value - The cosine for which to find the angle for
    * @summary Get the inversed value of a cosine in degrees.
@@ -4973,7 +5558,7 @@ declare class samp {
    * Calls the AMX native atan that returns a value with a Float tag
    *
    * @name samp.callNativeFloat
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=atan] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} value - The tangent for which to find the angle for
    * @summary Get the inversed value of a tangent in degrees.
@@ -4986,7 +5571,7 @@ declare class samp {
    * Calls the AMX native atan2 that returns a value with a Float tag
    *
    * @name samp.callNativeFloat
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=atan2] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} y - y size
    * @param {number} x - x size
@@ -5000,7 +5585,7 @@ declare class samp {
    * Calls the AMX native GetPlayerPoolSize 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerPoolSize] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @summary Gets the highest playerid currently in use on the server.
    * @see GetVehiclePoolSize
@@ -5013,7 +5598,7 @@ declare class samp {
    * Calls the AMX native GetVehiclePoolSize 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetVehiclePoolSize] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @summary Gets the highest vehicleid currently in use on the server.
    * @see GetPlayerPoolSize
@@ -5025,7 +5610,7 @@ declare class samp {
    * Calls the AMX native GetActorPoolSize 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetActorPoolSize] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @summary Gets the highest actorid created on the server.
    * @see CreateActor
@@ -5039,7 +5624,7 @@ declare class samp {
    * Calls the AMX native SHA256_PassHash 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SHA256_PassHash] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {string} password - 
    * @param {string} salt - 
@@ -5050,7 +5635,7 @@ declare class samp {
    * Calls the AMX native SetSVarInt 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetSVarInt] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {string} varname - The name of the server variable
    * @param {number} int_value - The integer to be set
@@ -5072,7 +5657,7 @@ declare class samp {
    * Calls the AMX native GetSVarInt 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetSVarInt] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {string} varname - The name of the server variable (case-insensitive). Assigned in SetSVarInt
    * @summary Gets an integer server variable&#x27;s value.
@@ -5090,7 +5675,7 @@ declare class samp {
    * Calls the AMX native SetSVarString 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetSVarString] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {string} varname - The name of the server variable
    * @param {string} string_value - The string to be set
@@ -5112,7 +5697,7 @@ declare class samp {
    * Calls the AMX native GetSVarString 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetSVarString] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {string} varname - The name of the server variable (case-insensitive). Assigned in SetSVarString
    * @param {number} len - The maximum length of the returned string
@@ -5131,7 +5716,7 @@ declare class samp {
    * Calls the AMX native SetSVarFloat 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetSVarFloat] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {string} varname - The name of the server variable
    * @param {number} float_value - The float to be set
@@ -5153,7 +5738,7 @@ declare class samp {
    * Calls the AMX native GetSVarFloat that returns a value with a Float tag
    *
    * @name samp.callNativeFloat
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetSVarFloat] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {string} varname - The name of the server variable (case-insensitive). Assigned in SetSVarFloat
    * @summary Gets a float server variable&#x27;s value.
@@ -5171,7 +5756,7 @@ declare class samp {
    * Calls the AMX native DeleteSVar 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=DeleteSVar] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {string} varname - The name of the server variable to delete
    * @summary Deletes a previously set server variable.
@@ -5192,7 +5777,7 @@ declare class samp {
    * Calls the AMX native GetSVarsUpperIndex 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetSVarsUpperIndex] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @summary Each SVar (server-variable) has its own unique identification number for lookup, this function returns the highest ID.
    * @see GetSVarNameAtIndex
@@ -5204,7 +5789,7 @@ declare class samp {
    * Calls the AMX native GetSVarNameAtIndex 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetSVarNameAtIndex] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} index - The index of the sVar
    * @param {number} ret_len - The max length of the returned string
@@ -5219,7 +5804,7 @@ declare class samp {
    * Calls the AMX native GetSVarType 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetSVarType] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {string} varname - The name of the server variable to get the type of
    * @summary Gets the type (integer, float or string) of a server variable.
@@ -5246,7 +5831,7 @@ declare class samp {
    * Calls the AMX native SetGameModeText 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetGameModeText] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {string} string - 
    */
@@ -5255,7 +5840,7 @@ declare class samp {
    * Calls the AMX native SetTeamCount 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetTeamCount] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} count - Number of teams the gamemode knows
    * @summary This function is used to change the amount of teams used in the gamemode. It has no obvious way of being used, but can help to indicate the number of teams used for better (more effective) internal handling. This function should only be used in the OnGameModeInit callback. Important: You can pass 2 billion here if you like, this function has no effect at all.
@@ -5267,7 +5852,7 @@ declare class samp {
    * Calls the AMX native AddPlayerClass 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=AddPlayerClass] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} modelid - The skin which the player will spawn with
    * @param {number} spawn_x - The X coordinate of the spawnpoint of this class
@@ -5300,7 +5885,7 @@ declare class samp {
    * Calls the AMX native AddPlayerClassEx 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=AddPlayerClassEx] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} teamid - The team you want the player to spawn in
    * @param {number} modelid - The skin which the player will spawn with
@@ -5332,7 +5917,7 @@ declare class samp {
    * Calls the AMX native AddStaticVehicle 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=AddStaticVehicle] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} modelid - The Model ID for the vehicle
    * @param {number} spawn_x - The X-coordinate for the vehicle
@@ -5358,7 +5943,7 @@ declare class samp {
    * Calls the AMX native AddStaticVehicleEx 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=AddStaticVehicleEx] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} modelid - The Model ID for the vehicle
    * @param {number} spawn_x - The X-coordinate for the vehicle
@@ -5386,7 +5971,7 @@ declare class samp {
    * Calls the AMX native AddStaticPickup 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=AddStaticPickup] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} model - The model of the pickup
    * @param {number} type - The pickup type. Determines how the pickup responds when picked up
@@ -5410,7 +5995,7 @@ declare class samp {
    * Calls the AMX native CreatePickup 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=CreatePickup] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} model - The model of the pickup
    * @param {number} type - The pickup spawn type (see table under remarks)
@@ -5460,7 +6045,7 @@ declare class samp {
    * Calls the AMX native DestroyPickup 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=DestroyPickup] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} pickup - The ID of the pickup to destroy (returned by CreatePickup)
    * @summary Destroys a pickup created with CreatePickup.
@@ -5472,7 +6057,7 @@ declare class samp {
    * Calls the AMX native ShowNameTags 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=ShowNameTags] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} show - 0 to disable, 1 to enable (enabled by default)
    * @summary Toggle the drawing of nametags, health bars and armor bars above players.
@@ -5486,7 +6071,7 @@ declare class samp {
    * Calls the AMX native ShowPlayerMarkers 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=ShowPlayerMarkers] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} mode - The mode to use for markers. They can be streamed, meaning they are only visible to nearby players. See table below
    * @summary Toggles player markers (blips on the radar). Must be used when the server starts (OnGameModeInit). For other times, see SetPlayerMarkerForPlayer.
@@ -5509,7 +6094,7 @@ declare class samp {
    * Calls the AMX native GameModeExit 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GameModeExit] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @summary Ends the current gamemode.
    * @see OnGameModeExit
@@ -5519,7 +6104,7 @@ declare class samp {
    * Calls the AMX native SetWorldTime 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetWorldTime] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} hour - The hour to set (0-23)
    * @summary Sets the world time (for all players) to a specific hour.
@@ -5534,7 +6119,7 @@ declare class samp {
    * Calls the AMX native GetWeaponName 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetWeaponName] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} weaponid - The ID of the weapon to get the name of
    * @param {number} len - The maximum length of the weapon name to store.
@@ -5552,7 +6137,7 @@ declare class samp {
    * Calls the AMX native EnableTirePopping 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=EnableTirePopping] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} enable - 
    */
@@ -5561,7 +6146,7 @@ declare class samp {
    * Calls the AMX native EnableVehicleFriendlyFire 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=EnableVehicleFriendlyFire] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @summary Enable friendly fire for team vehicles. Players will be unable to damage teammates&#x27; vehicles (SetPlayerTeam must be used!).
    * @see SetPlayerTeam
@@ -5572,7 +6157,7 @@ declare class samp {
    * Calls the AMX native AllowInteriorWeapons 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=AllowInteriorWeapons] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} allow - 1 to enable weapons in interiors (enabled by default), 0 to disable weapons in interiors
    * @summary Toggle whether the usage of weapons in interiors is allowed or not.
@@ -5586,7 +6171,7 @@ declare class samp {
    * Calls the AMX native SetWeather 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetWeather] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} weatherid - The weather to set
    * @summary Set the world weather for all players.
@@ -5599,7 +6184,7 @@ declare class samp {
    * Calls the AMX native GetGravity that returns a value with a Float tag
    *
    * @name samp.callNativeFloat
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetGravity] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @summary Get the currently set gravity.
    * @see SetGravity
@@ -5610,7 +6195,7 @@ declare class samp {
    * Calls the AMX native SetGravity 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetGravity] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} gravity - The value that the gravity should be set to (between -50 and 50)
    * @summary Set the gravity for all players.
@@ -5625,7 +6210,7 @@ declare class samp {
    * Calls the AMX native AllowAdminTeleport 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=AllowAdminTeleport] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} allow - 0 to disable and 1 to enable
    * @summary This function will determine whether RCON admins will be teleported to their waypoint when they set one.
@@ -5638,7 +6223,7 @@ declare class samp {
    * Calls the AMX native SetDeathDropAmount 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetDeathDropAmount] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} amount - 
    * @summary This function does not work in the current SA:MP version! 
@@ -5651,7 +6236,7 @@ declare class samp {
    * Calls the AMX native CreateExplosion 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=CreateExplosion] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} X - The X coordinate of the explosion
    * @param {number} Y - The Y coordinate of the explosion
@@ -5668,7 +6253,7 @@ declare class samp {
    * Calls the AMX native EnableZoneNames 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=EnableZoneNames] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} enable - 
    */
@@ -5677,7 +6262,7 @@ declare class samp {
    * Calls the AMX native UsePlayerPedAnims 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=UsePlayerPedAnims] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @summary Uses standard player walking animation (animation of the CJ skin) instead of custom animations for every skin (e.g. skating for skater skins).
    * @see ApplyAnimation
@@ -5690,7 +6275,7 @@ declare class samp {
    * Calls the AMX native DisableInteriorEnterExits 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=DisableInteriorEnterExits] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @summary Disable all the interior entrances and exits in the game (the yellow arrows at doors).
    * @see AllowInteriorWeapons
@@ -5703,7 +6288,7 @@ declare class samp {
    * Calls the AMX native SetNameTagDrawDistance 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetNameTagDrawDistance] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} distance - The distance to set
    * @summary Set the maximum distance to display the names of players.
@@ -5717,7 +6302,7 @@ declare class samp {
    * Calls the AMX native DisableNameTagLOS 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=DisableNameTagLOS] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @summary Disables the nametag Line-Of-Sight checking so that players can see nametags through objects.
    * @see ShowNameTags
@@ -5730,7 +6315,7 @@ declare class samp {
    * Calls the AMX native LimitGlobalChatRadius 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=LimitGlobalChatRadius] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} chat_radius - The range in which players will be able to see chat
    * @summary Set a radius limitation for the chat. Only players at a certain distance from the player will see their message in the chat. Also changes the distance at which a player can see other players on the map at the same distance.
@@ -5744,7 +6329,7 @@ declare class samp {
    * Calls the AMX native LimitPlayerMarkerRadius 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=LimitPlayerMarkerRadius] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} marker_radius - The radius that markers will show at
    * @summary Set the player marker radius.
@@ -5758,7 +6343,7 @@ declare class samp {
    * Calls the AMX native ConnectNPC 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=ConnectNPC] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {string} name - The name the NPC should connect as. Must follow the same rules as normal player names
    * @param {string} script - The NPC script name that is located in the npcmodes folder (without the .amx extension)
@@ -5774,7 +6359,7 @@ declare class samp {
    * Calls the AMX native IsPlayerNPC 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=IsPlayerNPC] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to check
    * @summary Check if a player is an actual player or an NPC.
@@ -5788,7 +6373,7 @@ declare class samp {
    * Calls the AMX native IsPlayerAdmin 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=IsPlayerAdmin] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to check
    * @summary Check if a player is logged in as an RCON admin.
@@ -5801,7 +6386,7 @@ declare class samp {
    * Calls the AMX native Kick 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=Kick] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to kick
    * @summary Kicks a player from the server. They will have to quit the game and re-connect if they wish to continue playing.
@@ -5815,7 +6400,7 @@ declare class samp {
    * Calls the AMX native Ban 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=Ban] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to ban
    * @summary Ban a player who is currently in the server. They will be unable to join the server ever again. The ban will be IP-based, and be saved in the samp.ban file in the server&#x27;s root directory. BanEx can be used to give a reason for the ban. IP bans can be added/removed using the RCON banip and unbanip commands (SendRconCommand).
@@ -5829,7 +6414,7 @@ declare class samp {
    * Calls the AMX native BanEx 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=BanEx] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to ban
    * @param {string} reason - The reason for the ban
@@ -5843,7 +6428,7 @@ declare class samp {
    * Calls the AMX native SendRconCommand 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SendRconCommand] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {string} command - The RCON command to be executed
    * @summary Sends an RCON (Remote Console) command.
@@ -5860,7 +6445,7 @@ declare class samp {
    * Calls the AMX native GetPlayerNetworkStats 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerNetworkStats] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player you want to get the networkstats of
    * @param {number} retstr_size - The length of the string that should be stored
@@ -5883,7 +6468,7 @@ declare class samp {
    * Calls the AMX native GetNetworkStats 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetNetworkStats] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} retstr_size - The length of the string to be stored
    * @summary Gets the server&#x27;s network stats and stores them in a string.
@@ -5927,7 +6512,7 @@ declare class samp {
    * Calls the AMX native GetPlayerVersion 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerVersion] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the client version of
    * @param {number} len - The maximum length of the version
@@ -5944,7 +6529,7 @@ declare class samp {
    * Calls the AMX native BlockIpAddress 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=BlockIpAddress] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {string} ip_address - The IP to block
    * @param {number} timems - The time (in milliseconds) that the connection will be blocked for. 0 can be used for an indefinite block
@@ -5959,7 +6544,7 @@ declare class samp {
    * Calls the AMX native UnBlockIpAddress 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=UnBlockIpAddress] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {string} ip_address - The IP address to unblock
    * @summary Unblock an IP address that was previously blocked using BlockIpAddress.
@@ -5972,7 +6557,7 @@ declare class samp {
    * Calls the AMX native GetServerVarAsString 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetServerVarAsString] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {string} varname - The name of the string variable to get the value of
    * @param {number} len - The length of the string that should be stored
@@ -5990,7 +6575,7 @@ declare class samp {
    * Calls the AMX native GetServerVarAsInt 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetServerVarAsInt] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {string} varname - The name of the integer variable to get the value of
    * @summary Get the integer value of a server variable.
@@ -6005,7 +6590,7 @@ declare class samp {
    * Calls the AMX native GetServerVarAsBool 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetServerVarAsBool] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {string} varname - The name of the boolean variable to get the value of
    * @summary Get the boolean value of a server variable.
@@ -6020,7 +6605,7 @@ declare class samp {
    * Calls the AMX native GetConsoleVarAsString 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetConsoleVarAsString] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {string} varname - The name of the string variable to get the value of
    * @param {number} len - The length of the string that should be stored
@@ -6037,7 +6622,7 @@ declare class samp {
    * Calls the AMX native GetConsoleVarAsInt 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetConsoleVarAsInt] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {string} varname - The name of the integer variable to get the value of
    * @summary Get the integer value of a console variable.
@@ -6051,7 +6636,7 @@ declare class samp {
    * Calls the AMX native GetConsoleVarAsBool 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetConsoleVarAsBool] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {string} varname - The name of the boolean variable to get the value of
    * @summary Get the boolean value of a console variable.
@@ -6065,7 +6650,7 @@ declare class samp {
    * Calls the AMX native GetServerTickRate 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetServerTickRate] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @summary Gets the tick rate (like FPS) of the server.
    * @see GetNetworkStats
@@ -6077,7 +6662,7 @@ declare class samp {
    * Calls the AMX native NetStats_GetConnectedTime 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=NetStats_GetConnectedTime] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the connected time of
    * @summary Gets the amount of time (in milliseconds) that a player has been connected to the server for.
@@ -6100,7 +6685,7 @@ declare class samp {
    * Calls the AMX native NetStats_MessagesReceived 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=NetStats_MessagesReceived] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the data from
    * @summary Gets the number of messages the server has received from the player.
@@ -6122,7 +6707,7 @@ declare class samp {
    * Calls the AMX native NetStats_BytesReceived 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=NetStats_BytesReceived] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the data from
    * @summary Gets the amount of data (in bytes) that the server has received from the player.
@@ -6144,7 +6729,7 @@ declare class samp {
    * Calls the AMX native NetStats_MessagesSent 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=NetStats_MessagesSent] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the data from
    * @summary Gets the number of messages the server has sent to the player.
@@ -6166,7 +6751,7 @@ declare class samp {
    * Calls the AMX native NetStats_BytesSent 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=NetStats_BytesSent] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the data from
    * @summary Gets the amount of data (in bytes) that the server has sent to the player.
@@ -6188,7 +6773,7 @@ declare class samp {
    * Calls the AMX native NetStats_MessagesRecvPerSecond 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=NetStats_MessagesRecvPerSecond] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the data from
    * @summary Gets the number of messages the player has received in the last second.
@@ -6210,7 +6795,7 @@ declare class samp {
    * Calls the AMX native NetStats_PacketLossPercent that returns a value with a Float tag
    *
    * @name samp.callNativeFloat
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=NetStats_PacketLossPercent] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the data from
    * @summary Gets the packet loss percentage of a player. Packet loss means data the player is sending to the server is being lost (or vice-versa).
@@ -6235,7 +6820,7 @@ declare class samp {
    * Calls the AMX native NetStats_ConnectionStatus 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=NetStats_ConnectionStatus] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the connection status of
    * @summary Gets the player&#x27;s current connection status.
@@ -6274,7 +6859,7 @@ declare class samp {
    * Calls the AMX native NetStats_GetIpPort 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=NetStats_GetIpPort] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the IP and port of
    * @param {number} ip_port_len - The maximum length of the IP/port. 22 is recommended
@@ -6297,7 +6882,7 @@ declare class samp {
    * Calls the AMX native CreateMenu 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=CreateMenu] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {string} title - The title for the new menu
    * @param {number} columns - How many colums shall the new menu have
@@ -6326,7 +6911,7 @@ declare class samp {
    * Calls the AMX native DestroyMenu 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=DestroyMenu] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} menuid - The menu ID to destroy
    * @summary Destroys the specified menu.
@@ -6342,7 +6927,7 @@ declare class samp {
    * Calls the AMX native AddMenuItem 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=AddMenuItem] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} menuid - The menu id to add an item to
    * @param {number} column - The column to add the item to
@@ -6369,7 +6954,7 @@ declare class samp {
    * Calls the AMX native SetMenuColumnHeader 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetMenuColumnHeader] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} menuid - ID of the menu to change
    * @param {number} column - The column (0 or 1) to set the header of
@@ -6386,7 +6971,7 @@ declare class samp {
    * Calls the AMX native ShowMenuForPlayer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=ShowMenuForPlayer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} menuid - The ID of the menu to show. Returned by CreateMenu
    * @param {number} playerid - The ID of the player to whom the menu will be shown
@@ -6408,7 +6993,7 @@ declare class samp {
    * Calls the AMX native HideMenuForPlayer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=HideMenuForPlayer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} menuid - The ID of the menu to hide. Returned by CreateMenu and passed to OnPlayerSelectedMenuRow
    * @param {number} playerid - The ID of the player that the menu will be hidden for
@@ -6427,7 +7012,7 @@ declare class samp {
    * Calls the AMX native IsValidMenu 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=IsValidMenu] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} menuid - The menu to check for existance
    * @summary Check if a menu ID is vliad.
@@ -6440,7 +7025,7 @@ declare class samp {
    * Calls the AMX native DisableMenu 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=DisableMenu] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} menuid - The ID of the menu to disable
    * @summary Disable a menu.
@@ -6454,7 +7039,7 @@ declare class samp {
    * Calls the AMX native DisableMenuRow 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=DisableMenuRow] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} menuid - The ID of the menu to disable a row of. Ensure this is valid, as an invalid menu ID will crash the entire server
    * @param {number} row - The ID of the row to disable (rows start at 0)
@@ -6473,7 +7058,7 @@ declare class samp {
    * Calls the AMX native GetPlayerMenu 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerMenu] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the current menu of
    * @summary Gets the ID of the menu the player is currently viewing (shown by ShowMenuForPlayer).
@@ -6492,7 +7077,7 @@ declare class samp {
    * Calls the AMX native TextDrawCreate 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=TextDrawCreate] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} x - 
    * @param {number} y - 
@@ -6503,7 +7088,7 @@ declare class samp {
    * Calls the AMX native TextDrawDestroy 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=TextDrawDestroy] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} text - 
    */
@@ -6512,7 +7097,7 @@ declare class samp {
    * Calls the AMX native TextDrawLetterSize 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=TextDrawLetterSize] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} text - 
    * @param {number} x - 
@@ -6523,7 +7108,7 @@ declare class samp {
    * Calls the AMX native TextDrawTextSize 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=TextDrawTextSize] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} text - 
    * @param {number} x - 
@@ -6534,7 +7119,7 @@ declare class samp {
    * Calls the AMX native TextDrawAlignment 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=TextDrawAlignment] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} text - 
    * @param {number} alignment - 
@@ -6544,7 +7129,7 @@ declare class samp {
    * Calls the AMX native TextDrawColor 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=TextDrawColor] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} text - 
    * @param {number} color - 
@@ -6554,7 +7139,7 @@ declare class samp {
    * Calls the AMX native TextDrawUseBox 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=TextDrawUseBox] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} text - 
    * @param {number} use - 
@@ -6564,7 +7149,7 @@ declare class samp {
    * Calls the AMX native TextDrawBoxColor 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=TextDrawBoxColor] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} text - 
    * @param {number} color - 
@@ -6574,7 +7159,7 @@ declare class samp {
    * Calls the AMX native TextDrawSetShadow 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=TextDrawSetShadow] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} text - 
    * @param {number} size - 
@@ -6584,7 +7169,7 @@ declare class samp {
    * Calls the AMX native TextDrawSetOutline 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=TextDrawSetOutline] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} text - 
    * @param {number} size - 
@@ -6594,7 +7179,7 @@ declare class samp {
    * Calls the AMX native TextDrawBackgroundColor 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=TextDrawBackgroundColor] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} text - 
    * @param {number} color - 
@@ -6604,7 +7189,7 @@ declare class samp {
    * Calls the AMX native TextDrawFont 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=TextDrawFont] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} text - 
    * @param {number} font - 
@@ -6614,7 +7199,7 @@ declare class samp {
    * Calls the AMX native TextDrawSetProportional 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=TextDrawSetProportional] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} text - 
    * @param {number} set - 
@@ -6624,7 +7209,7 @@ declare class samp {
    * Calls the AMX native TextDrawSetSelectable 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=TextDrawSetSelectable] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} text - 
    * @param {number} set - 
@@ -6634,7 +7219,7 @@ declare class samp {
    * Calls the AMX native TextDrawShowForPlayer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=TextDrawShowForPlayer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - 
    * @param {number} text - 
@@ -6644,7 +7229,7 @@ declare class samp {
    * Calls the AMX native TextDrawHideForPlayer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=TextDrawHideForPlayer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player that the textdraw should be hidden for
    * @param {number} text - The ID of the textdraw to hide
@@ -6658,7 +7243,7 @@ declare class samp {
    * Calls the AMX native TextDrawShowForAll 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=TextDrawShowForAll] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} text - The ID of the textdraw to show. Returned by TextDrawCreate
    * @summary Shows a textdraw for all players.
@@ -6675,7 +7260,7 @@ declare class samp {
    * Calls the AMX native TextDrawHideForAll 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=TextDrawHideForAll] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} text - The ID of the textdraw to hide (returned by TextDrawCreate)
    * @summary Hides a text draw for all players.
@@ -6688,7 +7273,7 @@ declare class samp {
    * Calls the AMX native TextDrawSetString 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=TextDrawSetString] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} text - 
    * @param {string} string - 
@@ -6698,7 +7283,7 @@ declare class samp {
    * Calls the AMX native TextDrawSetPreviewModel 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=TextDrawSetPreviewModel] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} text - 
    * @param {number} modelindex - 
@@ -6708,7 +7293,7 @@ declare class samp {
    * Calls the AMX native TextDrawSetPreviewRot 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=TextDrawSetPreviewRot] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} text - 
    * @param {number} fRotX - 
@@ -6721,7 +7306,7 @@ declare class samp {
    * Calls the AMX native TextDrawSetPreviewVehCol 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=TextDrawSetPreviewVehCol] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} text - 
    * @param {number} color1 - 
@@ -6732,7 +7317,7 @@ declare class samp {
    * Calls the AMX native GangZoneCreate 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GangZoneCreate] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} minx - The X coordinate for the west side of the gangzone
    * @param {number} miny - The Y coordinate for the south side of the gangzone
@@ -6760,7 +7345,7 @@ declare class samp {
    * Calls the AMX native GangZoneDestroy 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GangZoneDestroy] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} zone - The ID of the zone to destroy
    * @summary Destroy a gangzone.
@@ -6779,7 +7364,7 @@ declare class samp {
    * Calls the AMX native GangZoneShowForPlayer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GangZoneShowForPlayer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player you would like to show the gangzone for.
    * @param {number} zone - The ID of the gang zone to show for the player. Returned by GangZoneCreate
@@ -6801,7 +7386,7 @@ declare class samp {
    * Calls the AMX native GangZoneShowForAll 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GangZoneShowForAll] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} zone - The ID of the gangzone to show (returned by GangZoneCreate)
    * @param {number} color - The color to show the gang zone, as an integer or hex in RGBA color format. Alpha transparency supported
@@ -6825,7 +7410,7 @@ declare class samp {
    * Calls the AMX native GangZoneHideForPlayer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GangZoneHideForPlayer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to hide the gangzone for
    * @param {number} zone - The ID of the zone to hide
@@ -6845,7 +7430,7 @@ declare class samp {
    * Calls the AMX native GangZoneHideForAll 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GangZoneHideForAll] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} zone - The zone to hide
    * @summary GangZoneHideForAll hides a gangzone from all players.
@@ -6864,7 +7449,7 @@ declare class samp {
    * Calls the AMX native GangZoneFlashForPlayer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GangZoneFlashForPlayer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to flash the gangzone for
    * @param {number} zone - The ID of the zone to flash
@@ -6885,7 +7470,7 @@ declare class samp {
    * Calls the AMX native GangZoneFlashForAll 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GangZoneFlashForAll] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} zone - The zone to flash
    * @param {number} flashcolor - The color to flash the gang zone, as an integer or hex in RGBA color format. Alpha transparency supported
@@ -6905,7 +7490,7 @@ declare class samp {
    * Calls the AMX native GangZoneStopFlashForPlayer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GangZoneStopFlashForPlayer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to stop the gangzone flashing for
    * @param {number} zone - The ID of the gangzonezone to stop flashing
@@ -6925,7 +7510,7 @@ declare class samp {
    * Calls the AMX native GangZoneStopFlashForAll 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GangZoneStopFlashForAll] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} zone - The ID of the zone to stop flashing. Returned by GangZoneCreate
    * @summary Stops a gangzone flashing for all players.
@@ -6948,7 +7533,7 @@ declare class samp {
    * Calls the AMX native Create3DTextLabel 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=Create3DTextLabel] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {string} text - The initial text string
    * @param {number} color - The text Color, as an integer or hex in RGBA color format
@@ -6980,7 +7565,7 @@ declare class samp {
    * Calls the AMX native Delete3DTextLabel 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=Delete3DTextLabel] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} id - The ID of the 3D text label to delete
    * @summary Delete a 3D text label (created with Create3DTextLabel).
@@ -6999,7 +7584,7 @@ declare class samp {
    * Calls the AMX native Attach3DTextLabelToPlayer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=Attach3DTextLabelToPlayer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} id - The ID of the 3D text label to attach. Returned by Create3DTextLabel
    * @param {number} playerid - The ID of the player to attach the label to
@@ -7025,7 +7610,7 @@ declare class samp {
    * Calls the AMX native Attach3DTextLabelToVehicle 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=Attach3DTextLabelToVehicle] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} id - The ID of the 3D text label to attach. Returned by Create3DTextLabel
    * @param {number} vehicleid - The vehicle you want to attach the 3D Text Label to
@@ -7047,7 +7632,7 @@ declare class samp {
    * Calls the AMX native Update3DTextLabelText 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=Update3DTextLabelText] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} id - The 3D Text Label you want to update
    * @param {number} color - The color the 3D Text Label should have from now on
@@ -7068,7 +7653,7 @@ declare class samp {
    * Calls the AMX native CreatePlayer3DTextLabel 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=CreatePlayer3DTextLabel] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The player which should see the newly created 3DText Label
    * @param {string} text - The text to display
@@ -7098,7 +7683,7 @@ declare class samp {
    * Calls the AMX native DeletePlayer3DTextLabel 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=DeletePlayer3DTextLabel] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose 3D text label to delete
    * @param {number} id - The ID of the player&#x27;s 3D text label to delete
@@ -7120,7 +7705,7 @@ declare class samp {
    * Calls the AMX native UpdatePlayer3DTextLabelText 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=UpdatePlayer3DTextLabelText] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player for which the 3D Text Label was created
    * @param {number} id - The 3D Text Label you want to update
@@ -7142,7 +7727,7 @@ declare class samp {
    * Calls the AMX native ShowPlayerDialog 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=ShowPlayerDialog] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to show the dialog to
    * @param {number} dialogid - An ID to assign this dialog to, so responses can be processed. Max dialogid is 32767. Using negative values will close any open dialog
@@ -7167,7 +7752,7 @@ declare class samp {
    * Calls the AMX native gpci 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=gpci] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - 
    * @param {number} maxlen - 
@@ -7177,7 +7762,7 @@ declare class samp {
    * Calls the AMX native CreateActor 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=CreateActor] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} modelid - The model ID (skin ID) the actor should have
    * @param {number} X - The X coordinate to create the actor at
@@ -7223,7 +7808,7 @@ declare class samp {
    * Calls the AMX native DestroyActor 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=DestroyActor] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} actorid - The ID of the actor to destroy. Returned by CreateActor
    * @summary Destroy an actor which was created with CreateActor.
@@ -7239,7 +7824,7 @@ declare class samp {
    * Calls the AMX native IsActorStreamedIn 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=IsActorStreamedIn] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} actorid - The ID of the actor
    * @param {number} forplayerid - The ID of the player
@@ -7254,7 +7839,7 @@ declare class samp {
    * Calls the AMX native SetActorVirtualWorld 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetActorVirtualWorld] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} actorid - The ID of the actor (returned by CreateActor) to set the virtual world of
    * @param {number} vworld - The virtual world to put the actor ID
@@ -7272,7 +7857,7 @@ declare class samp {
    * Calls the AMX native GetActorVirtualWorld 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetActorVirtualWorld] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} actorid - The ID of the actor to get the virtual world of
    * @summary Get the virtual world of an actor.
@@ -7285,7 +7870,7 @@ declare class samp {
    * Calls the AMX native ApplyActorAnimation 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=ApplyActorAnimation] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} actorid - The ID of the actor to apply the animation to
    * @param {string} animlib - The animation library from which to apply an animation
@@ -7310,7 +7895,7 @@ declare class samp {
    * Calls the AMX native ClearActorAnimations 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=ClearActorAnimations] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} actorid - The ID of the actor (returned by CreateActor) to clear the animations for
    * @summary Clear any animations applied to an actor.
@@ -7326,7 +7911,7 @@ declare class samp {
    * Calls the AMX native SetActorPos 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetActorPos] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} actorid - The ID of the actor to set the position of. Returned by CreateActor
    * @param {number} X - The X coordinate to position the actor at
@@ -7347,7 +7932,7 @@ declare class samp {
    * Calls the AMX native GetActorPos 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetActorPos] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} actorid - The ID of the actor to get the position of. Returned by CreateActor
    * @summary Get the position of an actor.
@@ -7363,7 +7948,7 @@ declare class samp {
    * Calls the AMX native SetActorFacingAngle 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetActorFacingAngle] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} actorid - The ID of the actor to set the facing angle of. Returned by CreateActor
    * @param {number} ang - The facing angle to set for the actor
@@ -7383,7 +7968,7 @@ declare class samp {
    * Calls the AMX native GetActorFacingAngle 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetActorFacingAngle] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} actorid - The ID of the actor to get the facing angle of. Returned by CreateActor
    * @summary Get the facing angle of an actor.
@@ -7400,7 +7985,7 @@ declare class samp {
    * Calls the AMX native SetActorHealth 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetActorHealth] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} actorid - 
    * @param {number} health - 
@@ -7410,7 +7995,7 @@ declare class samp {
    * Calls the AMX native GetActorHealth 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetActorHealth] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} actorid - 
    */
@@ -7419,7 +8004,7 @@ declare class samp {
    * Calls the AMX native SetActorInvulnerable 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetActorInvulnerable] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} actorid - 
    * @param {number} invulnerable - 
@@ -7429,7 +8014,7 @@ declare class samp {
    * Calls the AMX native IsActorInvulnerable 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=IsActorInvulnerable] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} actorid - The ID of the actor to check
    * @summary Check if an actor is invulnerable.
@@ -7444,7 +8029,7 @@ declare class samp {
    * Calls the AMX native IsValidActor 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=IsValidActor] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} actorid - 
    */
@@ -7453,7 +8038,7 @@ declare class samp {
    * Calls the AMX native HTTP 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=HTTP] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} index - 
    * @param {number} type - 
@@ -7466,7 +8051,7 @@ declare class samp {
    * Calls the AMX native CreateObject 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=CreateObject] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} modelid - The model to create
    * @param {number} X - The X coordinate to create the object at
@@ -7501,7 +8086,7 @@ declare class samp {
    * Calls the AMX native AttachObjectToVehicle 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=AttachObjectToVehicle] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} objectid - The ID of the object to attach to the vehicle. Note that this is an object ID, not a model ID. The object must be CreateObject created first
    * @param {number} vehicleid - The ID of the vehicle to attach the object to
@@ -7525,7 +8110,7 @@ declare class samp {
    * Calls the AMX native AttachObjectToObject 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=AttachObjectToObject] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} objectid - The object to attach to another object
    * @param {number} attachtoid - The object to attach the object to
@@ -7557,7 +8142,7 @@ declare class samp {
    * Calls the AMX native AttachObjectToPlayer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=AttachObjectToPlayer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} objectid - The ID of the object to attach to the player
    * @param {number} playerid - The ID of the player to attach the object to
@@ -7580,7 +8165,7 @@ declare class samp {
    * Calls the AMX native SetObjectPos 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetObjectPos] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} objectid - The ID of the object to set the position of. Returned by CreateObject
    * @param {number} X - The X coordinate to position the object at
@@ -7598,7 +8183,7 @@ declare class samp {
    * Calls the AMX native GetObjectPos 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetObjectPos] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} objectid - The ID of the object to get the position of.
    * @summary Get the position of an object.
@@ -7616,7 +8201,7 @@ declare class samp {
    * Calls the AMX native SetObjectRot 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetObjectRot] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} objectid - The ID of the object to set the rotation of
    * @param {number} RotX - The X rotation
@@ -7634,7 +8219,7 @@ declare class samp {
    * Calls the AMX native GetObjectRot 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetObjectRot] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} objectid - The objectid of the object you want to get the rotation from
    * @summary Use this function to get the objects current rotation. The rotation is saved by reference in three RotX/RotY/RotZ variables.
@@ -7649,7 +8234,7 @@ declare class samp {
    * Calls the AMX native GetObjectModel 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetObjectModel] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} objectid - The ID of the object to get the model of
    * @summary Get the model ID of an object.
@@ -7663,7 +8248,7 @@ declare class samp {
    * Calls the AMX native SetObjectNoCameraCol 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetObjectNoCameraCol] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} objectid - The ID of the object to disable camera collisions on
    * @summary Disable collisions between players&#x27; cameras and the specified object.
@@ -7681,7 +8266,7 @@ declare class samp {
    * Calls the AMX native IsValidObject 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=IsValidObject] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} objectid - The ID of the object to check the existence of
    * @summary Checks if an object with the ID provided exists.
@@ -7696,7 +8281,7 @@ declare class samp {
    * Calls the AMX native DestroyObject 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=DestroyObject] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} objectid - The ID of the object to destroy. Returned by CreateObject
    * @summary Destroys (removes) an object that was created using CreateObject.
@@ -7709,7 +8294,7 @@ declare class samp {
    * Calls the AMX native MoveObject 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=MoveObject] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} objectid - The ID of the object to move
    * @param {number} X - The X coordinate to move the object to
@@ -7736,7 +8321,7 @@ declare class samp {
    * Calls the AMX native StopObject 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=StopObject] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} objectid - The ID of the object to stop moving
    * @summary Stop a moving object after MoveObject has been used.
@@ -7750,7 +8335,7 @@ declare class samp {
    * Calls the AMX native IsObjectMoving 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=IsObjectMoving] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} objectid - The objectid you want to check if is moving
    * @summary Checks if the given objectid is moving.
@@ -7766,7 +8351,7 @@ declare class samp {
    * Calls the AMX native EditObject 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=EditObject] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player that should edit the object
    * @param {number} objectid - The ID of the object to be edited by the player
@@ -7787,7 +8372,7 @@ declare class samp {
    * Calls the AMX native EditPlayerObject 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=EditPlayerObject] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player that should edit the object
    * @param {number} objectid - The object to be edited by the player
@@ -7808,7 +8393,7 @@ declare class samp {
    * Calls the AMX native SelectObject 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SelectObject] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player that should be able to select the object
    * @summary Display the cursor and allow the player to select an object. OnPlayerSelectObject is called when the player selects an object.
@@ -7824,7 +8409,7 @@ declare class samp {
    * Calls the AMX native CancelEdit 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=CancelEdit] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to cancel edition for
    * @summary Cancel object edition mode for a player.
@@ -7839,7 +8424,7 @@ declare class samp {
    * Calls the AMX native CreatePlayerObject 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=CreatePlayerObject] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to create the object for
    * @param {number} modelid - The model to create
@@ -7870,7 +8455,7 @@ declare class samp {
    * Calls the AMX native AttachPlayerObjectToVehicle 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=AttachPlayerObjectToVehicle] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player the object was created for
    * @param {number} objectid - The ID of the object to attach to the vehicle
@@ -7893,7 +8478,7 @@ declare class samp {
    * Calls the AMX native SetPlayerObjectPos 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerObjectPos] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player-object to set the position of
    * @param {number} objectid - The ID of the player-object to set the position of. Returned by CreatePlayerObject
@@ -7915,7 +8500,7 @@ declare class samp {
    * Calls the AMX native GetPlayerObjectPos 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerObjectPos] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player object to get the position of
    * @param {number} objectid - The object&#x27;s id of which you want the current location
@@ -7936,7 +8521,7 @@ declare class samp {
    * Calls the AMX native SetPlayerObjectRot 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerObjectRot] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player-object to rotate
    * @param {number} objectid - The ID of the player-object to rotate
@@ -7959,7 +8544,7 @@ declare class samp {
    * Calls the AMX native GetPlayerObjectRot 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerObjectRot] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The player you associated this object to
    * @param {number} objectid - The objectid of the object you want to get the rotation from
@@ -7975,7 +8560,7 @@ declare class samp {
    * Calls the AMX native GetPlayerObjectModel 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerObjectModel] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player-object to get the model of
    * @param {number} objectid - The ID of the player-object of which to retrieve the model ID
@@ -7990,7 +8575,7 @@ declare class samp {
    * Calls the AMX native SetPlayerObjectNoCameraCol 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerObjectNoCameraCol] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The playerID the object belongs to
    * @param {number} objectid - The ID of the object you want to toggle
@@ -8006,7 +8591,7 @@ declare class samp {
    * Calls the AMX native IsValidPlayerObject 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=IsValidPlayerObject] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player-object to validate
    * @param {number} objectid - The ID of the object to validate
@@ -8021,7 +8606,7 @@ declare class samp {
    * Calls the AMX native DestroyPlayerObject 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=DestroyPlayerObject] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player-object to destroy
    * @param {number} objectid - The ID of the player-object to destroy. Returned by CreatePlayerObject
@@ -8035,7 +8620,7 @@ declare class samp {
    * Calls the AMX native MovePlayerObject 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=MovePlayerObject] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player-object to move
    * @param {number} objectid - The ID of the object to move
@@ -8062,7 +8647,7 @@ declare class samp {
    * Calls the AMX native StopPlayerObject 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=StopPlayerObject] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player-object to stop
    * @param {number} objectid - The ID of the player-object to stop
@@ -8077,7 +8662,7 @@ declare class samp {
    * Calls the AMX native IsPlayerObjectMoving 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=IsPlayerObjectMoving] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player-object is checked
    * @param {number} objectid - The player objectid you want to check if is moving
@@ -8094,7 +8679,7 @@ declare class samp {
    * Calls the AMX native AttachPlayerObjectToPlayer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=AttachPlayerObjectToPlayer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} objectplayer - The id of the player which is linked with the object
    * @param {number} objectid - The objectid you want to attach to the player
@@ -8117,7 +8702,7 @@ declare class samp {
    * Calls the AMX native SetObjectMaterial 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetObjectMaterial] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} objectid - The ID of the object to change the texture of
    * @param {number} materialindex - The material index on the object to change (0 to 15)
@@ -8140,7 +8725,7 @@ declare class samp {
    * Calls the AMX native SetPlayerObjectMaterial 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerObjectMaterial] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player the object is associated to
    * @param {number} objectid - The ID of the object to replace the texture of
@@ -8160,7 +8745,7 @@ declare class samp {
    * Calls the AMX native SetObjectMaterialText 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetObjectMaterialText] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} objectid - The ID of the object to replace the texture of with text
    * @param {string} text - The text to show on the object. (MAX 2048 characters)
@@ -8214,7 +8799,7 @@ declare class samp {
    * Calls the AMX native SetPlayerObjectMaterialText 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerObjectMaterialText] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player object to set the text of
    * @param {number} objectid - The ID of the object on which to place the text
@@ -8265,7 +8850,7 @@ declare class samp {
    * Calls the AMX native SetObjectsDefaultCameraCol 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetObjectsDefaultCameraCol] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} disable - 1 to disable camera collisions for newly created objects and 0 to enable them (enabled by default)
    * @summary Allows camera collisions with newly created objects to be disabled by default.
@@ -8280,7 +8865,7 @@ declare class samp {
    * Calls the AMX native SetSpawnInfo 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetSpawnInfo] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The PlayerID of who you want to set the spawn information
    * @param {number} team - The Team-ID of the chosen player
@@ -8305,7 +8890,7 @@ declare class samp {
    * Calls the AMX native SpawnPlayer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SpawnPlayer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to spawn
    * @summary (Re)Spawns a player.
@@ -8323,7 +8908,7 @@ declare class samp {
    * Calls the AMX native SetPlayerPos 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerPos] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to set the position of
    * @param {number} x - The X coordinate to position the player at
@@ -8346,7 +8931,7 @@ declare class samp {
    * Calls the AMX native SetPlayerPosFindZ 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerPosFindZ] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to set the position of
    * @param {number} x - The X coordinate to position the player at
@@ -8366,7 +8951,7 @@ declare class samp {
    * Calls the AMX native GetPlayerPos 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerPos] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the position of
    * @summary Get the position of a player, represented by X, Y and Z coordinates.
@@ -8382,7 +8967,7 @@ declare class samp {
    * Calls the AMX native SetPlayerFacingAngle 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerFacingAngle] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to set the facing angle of
    * @param {number} ang - The angle the player should face
@@ -8400,7 +8985,7 @@ declare class samp {
    * Calls the AMX native GetPlayerFacingAngle 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerFacingAngle] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The player you want to get the angle of
    * @summary Gets the angle a player is facing.
@@ -8414,7 +8999,7 @@ declare class samp {
    * Calls the AMX native IsPlayerInRangeOfPoint 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=IsPlayerInRangeOfPoint] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player
    * @param {number} range - The furthest distance the player can be from the point to be in range
@@ -8433,7 +9018,7 @@ declare class samp {
    * Calls the AMX native GetPlayerDistanceFromPoint that returns a value with a Float tag
    *
    * @name samp.callNativeFloat
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerDistanceFromPoint] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to calculate the distance from
    * @param {number} X - The X map coordinate
@@ -8451,7 +9036,7 @@ declare class samp {
    * Calls the AMX native IsPlayerStreamedIn 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=IsPlayerStreamedIn] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to check is streamed in
    * @param {number} forplayerid - The ID of the player to check if playerid is streamed in for
@@ -8472,7 +9057,7 @@ declare class samp {
    * Calls the AMX native SetPlayerInterior 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerInterior] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to set the interior of
    * @param {number} interiorid - The interior ID to set the player in
@@ -8490,7 +9075,7 @@ declare class samp {
    * Calls the AMX native GetPlayerInterior 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerInterior] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The player to get the interior ID of
    * @summary Retrieves the player&#x27;s current interior. A list of currently known interiors with their positions can be found on this page.
@@ -8504,7 +9089,7 @@ declare class samp {
    * Calls the AMX native SetPlayerHealth 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerHealth] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to set the health of
    * @param {number} health - The value to set the player&#x27;s health to. Max health that can be displayed in the HUD is 100, though higher values are valid
@@ -8525,7 +9110,7 @@ declare class samp {
    * Calls the AMX native GetPlayerHealth 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerHealth] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player
    * @summary The function GetPlayerHealth allows you to retrieve the health of a player. Useful for cheat detection, among other things.
@@ -8546,7 +9131,7 @@ declare class samp {
    * Calls the AMX native SetPlayerArmour 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerArmour] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to set the armour of
    * @param {number} armour - The amount of armour to set, as a percentage (float). Values larger than 100 are valid, but won&#x27;t be displayed in the HUD&#x27;s armour bar
@@ -8566,7 +9151,7 @@ declare class samp {
    * Calls the AMX native GetPlayerArmour 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerArmour] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player that you want to get the armour of
    * @summary This function stores the armour of a player into a variable.
@@ -8586,7 +9171,7 @@ declare class samp {
    * Calls the AMX native SetPlayerAmmo 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerAmmo] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to set the weapon ammo of
    * @param {number} weaponslot - The ID of the weapon slot to set the ammo of.
@@ -8606,7 +9191,7 @@ declare class samp {
    * Calls the AMX native GetPlayerAmmo 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerAmmo] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose ammo to get
    * @summary Gets the amount of ammo in a player&#x27;s current weapon.
@@ -8620,7 +9205,7 @@ declare class samp {
    * Calls the AMX native GetPlayerWeaponState 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerWeaponState] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to obtain the weapon state of
    * @summary Check the state of a player&#x27;s weapon.
@@ -8643,7 +9228,7 @@ declare class samp {
    * Calls the AMX native GetPlayerTargetPlayer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerTargetPlayer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the target of
    * @summary Check who a player is aiming at.
@@ -8660,7 +9245,7 @@ declare class samp {
    * Calls the AMX native GetPlayerTargetActor 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerTargetActor] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the target of
    * @summary Gets id of an actor which is aimed by certain player.
@@ -8677,7 +9262,7 @@ declare class samp {
    * Calls the AMX native SetPlayerTeam 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerTeam] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player you want to set the team of
    * @param {number} teamid - The team to put the player in. Use NO_TEAM to remove the player from any team
@@ -8693,7 +9278,7 @@ declare class samp {
    * Calls the AMX native GetPlayerTeam 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerTeam] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the team of
    * @summary Get the ID of the team the player is on.
@@ -8710,7 +9295,7 @@ declare class samp {
    * Calls the AMX native SetPlayerScore 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerScore] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to set the score of
    * @param {number} score - The value to set the player&#x27;s score to
@@ -8726,7 +9311,7 @@ declare class samp {
    * Calls the AMX native GetPlayerScore 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerScore] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The player to get the score of
    * @summary This function returns a player&#x27;s score as it was set using SetPlayerScore.
@@ -8739,7 +9324,7 @@ declare class samp {
    * Calls the AMX native GetPlayerDrunkLevel 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerDrunkLevel] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The player you want to check the drunkenness level of
    * @summary 
@@ -8755,7 +9340,7 @@ declare class samp {
    * Calls the AMX native SetPlayerDrunkLevel 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerDrunkLevel] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to set the drunkenness of
    * @param {number} level - The level of drunkenness to set
@@ -8778,7 +9363,7 @@ declare class samp {
    * Calls the AMX native SetPlayerColor 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerColor] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose color to set
    * @param {number} color - The color to set. Supports alpha values (RGBA)
@@ -8794,7 +9379,7 @@ declare class samp {
    * Calls the AMX native GetPlayerColor 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerColor] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the color of
    * @summary Gets the color of the player&#x27;s name and radar marker. Only works after SetPlayerColor.
@@ -8808,7 +9393,7 @@ declare class samp {
    * Calls the AMX native SetPlayerSkin 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerSkin] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to set the skin of
    * @param {number} skinid - The skin the player should use
@@ -8828,7 +9413,7 @@ declare class samp {
    * Calls the AMX native GetPlayerSkin 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerSkin] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The player you want to get the skin from
    * @summary Returns the class of the players skin.
@@ -8842,7 +9427,7 @@ declare class samp {
    * Calls the AMX native GivePlayerWeapon 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GivePlayerWeapon] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to give a weapon to
    * @param {number} weaponid - The ID of the weapon to give to the player
@@ -8860,7 +9445,7 @@ declare class samp {
    * Calls the AMX native ResetPlayerWeapons 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=ResetPlayerWeapons] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose weapons to remove
    * @summary Removes all weapons from a player.
@@ -8877,7 +9462,7 @@ declare class samp {
    * Calls the AMX native SetPlayerArmedWeapon 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerArmedWeapon] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to arm with a weapon
    * @param {number} weaponid - The ID of the weapon that the player should be armed with
@@ -8896,7 +9481,7 @@ declare class samp {
    * Calls the AMX native GetPlayerWeaponData 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerWeaponData] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose weapon data to retrieve
    * @param {number} slot - The weapon slot to get data for (0-12)
@@ -8914,7 +9499,7 @@ declare class samp {
    * Calls the AMX native GivePlayerMoney 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GivePlayerMoney] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to give money to or take money from
    * @param {number} money - The amount of money to give the player. Use a minus value to take money
@@ -8931,7 +9516,7 @@ declare class samp {
    * Calls the AMX native ResetPlayerMoney 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=ResetPlayerMoney] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to reset the money of
    * @summary Reset a player&#x27;s money to $0.
@@ -8947,7 +9532,7 @@ declare class samp {
    * Calls the AMX native SetPlayerName 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerName] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to set the name of
    * @param {string} name - The name to set. Must be 1-24 characters long and only contain valid characters (0-9, a-z, A-Z, [], (), $, @, ., _, &#x3D;)
@@ -8968,7 +9553,7 @@ declare class samp {
    * Calls the AMX native GetPlayerMoney 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerMoney] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the money of
    * @summary Retrieves the amount of money a player has.
@@ -8981,7 +9566,7 @@ declare class samp {
    * Calls the AMX native GetPlayerState 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerState] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the current state of
    * @summary Get a player&#x27;s current state.
@@ -9010,7 +9595,7 @@ declare class samp {
    * Calls the AMX native GetPlayerIp 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerIp] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the IP address of
    * @param {number} len - The maximum length of the IP address (recommended 16)
@@ -9030,7 +9615,7 @@ declare class samp {
    * Calls the AMX native GetPlayerPing 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerPing] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the ping of
    * @summary Get the ping of a player. The ping measures the amount of time it takes for the server to &#x27;ping&#x27; the client and for the client to send the message back.
@@ -9045,7 +9630,7 @@ declare class samp {
    * Calls the AMX native GetPlayerWeapon 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerWeapon] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the currently held weapon of
    * @summary Returns the ID of the weapon a player is currently holding.
@@ -9060,7 +9645,7 @@ declare class samp {
    * Calls the AMX native GetPlayerKeys 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerKeys] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the keys of
    * @summary Check which keys a player is pressing.
@@ -9074,7 +9659,7 @@ declare class samp {
    * Calls the AMX native GetPlayerName 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerName] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the name of
    * @param {number} len - The length of the string that should be stored. Recommended to be MAX_PLAYER_NAME
@@ -9092,7 +9677,7 @@ declare class samp {
    * Calls the AMX native SetPlayerTime 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerTime] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to set the game time of
    * @param {number} hour - Hour to set (0-23)
@@ -9112,7 +9697,7 @@ declare class samp {
    * Calls the AMX native GetPlayerTime 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerTime] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the game time of
    * @summary Get the player&#x27;s current game time. Set by SetWorldTime or SetPlayerTime, or by the game automatically if TogglePlayerClock is used.
@@ -9129,7 +9714,7 @@ declare class samp {
    * Calls the AMX native TogglePlayerClock 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=TogglePlayerClock] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - 
    * @param {number} toggle - 
@@ -9139,7 +9724,7 @@ declare class samp {
    * Calls the AMX native SetPlayerWeather 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerWeather] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose weather to set
    * @param {number} weather - The weather to set
@@ -9153,7 +9738,7 @@ declare class samp {
    * Calls the AMX native ForceClassSelection 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=ForceClassSelection] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The player to send back to class selection
    * @summary Forces a player to go back to class selection.
@@ -9168,7 +9753,7 @@ declare class samp {
    * Calls the AMX native SetPlayerWantedLevel 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerWantedLevel] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to set the wanted level of
    * @param {number} level - The wanted level to set for the player (0-6)
@@ -9185,7 +9770,7 @@ declare class samp {
    * Calls the AMX native GetPlayerWantedLevel 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerWantedLevel] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player that you want to get the wanted level of
    * @summary Gets the wanted level of a player.
@@ -9198,7 +9783,7 @@ declare class samp {
    * Calls the AMX native SetPlayerFightingStyle 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerFightingStyle] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of player to set the fighting style of
    * @param {number} style - The fighting style that should be set
@@ -9223,7 +9808,7 @@ declare class samp {
    * Calls the AMX native GetPlayerFightingStyle 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerFightingStyle] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the fighting style of
    * @summary Get the fighting style the player currently using.
@@ -9247,7 +9832,7 @@ declare class samp {
    * Calls the AMX native SetPlayerVelocity 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerVelocity] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The player to apply the speed to
    * @param {number} X - The velocity (speed) on the X axis
@@ -9268,7 +9853,7 @@ declare class samp {
    * Calls the AMX native GetPlayerVelocity 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerVelocity] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The player to get the speed from
    * @summary Get the velocity (speed) of a player on the X, Y and Z axes.
@@ -9282,7 +9867,7 @@ declare class samp {
    * Calls the AMX native PlayCrimeReportForPlayer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=PlayCrimeReportForPlayer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player that will hear the crime report
    * @param {number} suspectid - The ID of the suspect player whom will be described in the crime report
@@ -9320,7 +9905,7 @@ declare class samp {
    * Calls the AMX native PlayAudioStreamForPlayer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=PlayAudioStreamForPlayer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to play the audio for
    * @param {string} url - The url to play. Valid formats are mp3 and ogg/vorbis. A link to a .pls (playlist) file will play that playlist
@@ -9343,7 +9928,7 @@ declare class samp {
    * Calls the AMX native StopAudioStreamForPlayer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=StopAudioStreamForPlayer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The player you want to stop the audio stream for
    * @summary Stops the current audio stream for a player.
@@ -9356,7 +9941,7 @@ declare class samp {
    * Calls the AMX native SetPlayerShopName 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerShopName] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to load the interior script for
    * @param {string} shopname - The shop script to load. Leave blank (&quot;&quot;) to unload scripts
@@ -9384,7 +9969,7 @@ declare class samp {
    * Calls the AMX native SetPlayerSkillLevel 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerSkillLevel] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to set the weapon skill of
    * @param {number} skill - The weapon to set the skill of
@@ -9415,7 +10000,7 @@ declare class samp {
    * Calls the AMX native GetPlayerSurfingVehicleID 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerSurfingVehicleID] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player you want to know the surfing vehicle ID of
    * @summary Get the ID of the vehicle that the player is surfing (stuck to the roof of).
@@ -9429,7 +10014,7 @@ declare class samp {
    * Calls the AMX native GetPlayerSurfingObjectID 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerSurfingObjectID] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - 
    */
@@ -9438,7 +10023,7 @@ declare class samp {
    * Calls the AMX native RemoveBuildingForPlayer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=RemoveBuildingForPlayer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to remove the objects for
    * @param {number} modelid - The model to remove
@@ -9459,7 +10044,7 @@ declare class samp {
    * Calls the AMX native GetPlayerLastShotVectors 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerLastShotVectors] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the last bullet shot information of
    * @summary Retrieves the start and end (hit) position of the last bullet a player fired.
@@ -9480,7 +10065,7 @@ declare class samp {
    * Calls the AMX native SetPlayerAttachedObject 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerAttachedObject] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to attach the object to
    * @param {number} index - The index (slot) to assign the object to (0-9 since 0.3d, 0-4 in previous versions)
@@ -9534,7 +10119,7 @@ declare class samp {
    * Calls the AMX native RemovePlayerAttachedObject 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=RemovePlayerAttachedObject] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to remove the object from
    * @param {number} index - The index of the object to remove (set with SetPlayerAttachedObject)
@@ -9549,7 +10134,7 @@ declare class samp {
    * Calls the AMX native IsPlayerAttachedObjectSlotUsed 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=IsPlayerAttachedObjectSlotUsed] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to check
    * @param {number} index - The index (slot) to check
@@ -9564,7 +10149,7 @@ declare class samp {
    * Calls the AMX native EditAttachedObject 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=EditAttachedObject] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to enter in to edition mode
    * @param {number} index - The index (slot) of the attached object to edit
@@ -9593,7 +10178,7 @@ declare class samp {
    * Calls the AMX native CreatePlayerTextDraw 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=CreatePlayerTextDraw] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to create the textdraw for
    * @param {number} x - X-Coordinate
@@ -9641,7 +10226,7 @@ declare class samp {
    * Calls the AMX native PlayerTextDrawDestroy 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=PlayerTextDrawDestroy] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player who&#x27;s player-textdraw to destroy
    * @param {number} text - The ID of the textdraw to destroy
@@ -9668,7 +10253,7 @@ declare class samp {
    * Calls the AMX native PlayerTextDrawLetterSize 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=PlayerTextDrawLetterSize] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player-textdraw to set the letter size of
    * @param {number} text - The ID of the player-textdraw to change the letter size of
@@ -9699,7 +10284,7 @@ declare class samp {
    * Calls the AMX native PlayerTextDrawTextSize 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=PlayerTextDrawTextSize] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player-textdraw to set the size of
    * @param {number} text - The ID of the player-textdraw to set the size of
@@ -9741,7 +10326,7 @@ declare class samp {
    * Calls the AMX native PlayerTextDrawAlignment 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=PlayerTextDrawAlignment] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player-textdraw to set the alignment of
    * @param {number} text - The ID of the player-textdraw to set the alignment of
@@ -9770,7 +10355,7 @@ declare class samp {
    * Calls the AMX native PlayerTextDrawColor 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=PlayerTextDrawColor] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player who&#x27;s textdraw to set the color of
    * @param {number} text - The TextDraw to change
@@ -9800,7 +10385,7 @@ declare class samp {
    * Calls the AMX native PlayerTextDrawUseBox 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=PlayerTextDrawUseBox] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose textdraw to toggle the box of
    * @param {number} text - The ID of the player-textdraw to toggle the box of
@@ -9828,7 +10413,7 @@ declare class samp {
    * Calls the AMX native PlayerTextDrawBoxColor 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=PlayerTextDrawBoxColor] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose textdraw to set the box color of
    * @param {number} text - The ID of the player textdraw to set the box color of
@@ -9856,7 +10441,7 @@ declare class samp {
    * Calls the AMX native PlayerTextDrawSetShadow 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=PlayerTextDrawSetShadow] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to show the textdraw for
    * @param {number} text - The ID of the textdraw to show
@@ -9884,7 +10469,7 @@ declare class samp {
    * Calls the AMX native PlayerTextDrawSetOutline 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=PlayerTextDrawSetOutline] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player-textdraw to set the outline of
    * @param {number} text - The ID of the player-textdraw to set the outline of
@@ -9912,7 +10497,7 @@ declare class samp {
    * Calls the AMX native PlayerTextDrawBackgroundColor 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=PlayerTextDrawBackgroundColor] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player-textdraw to set the background color of
    * @param {number} text - The ID of the player-textdraw to set the background color of
@@ -9941,7 +10526,7 @@ declare class samp {
    * Calls the AMX native PlayerTextDrawFont 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=PlayerTextDrawFont] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player-textdraw to change the font of
    * @param {number} text - The ID of the player-textdraw to change the font of
@@ -9969,7 +10554,7 @@ declare class samp {
    * Calls the AMX native PlayerTextDrawSetProportional 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=PlayerTextDrawSetProportional] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player-textdraw to set the proportionality of
    * @param {number} text - The ID of the player-textdraw to set the proportionality of
@@ -9997,7 +10582,7 @@ declare class samp {
    * Calls the AMX native PlayerTextDrawSetSelectable 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=PlayerTextDrawSetSelectable] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player-textdraw to set the selectability of
    * @param {number} text - The ID of the player-textdraw to set the selectability of
@@ -10015,7 +10600,7 @@ declare class samp {
    * Calls the AMX native PlayerTextDrawShow 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=PlayerTextDrawShow] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to show the textdraw for
    * @param {number} text - The ID of the textdraw to show
@@ -10042,7 +10627,7 @@ declare class samp {
    * Calls the AMX native PlayerTextDrawHide 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=PlayerTextDrawHide] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to hide the textdraw for
    * @param {number} text - The ID of the textdraw to hide
@@ -10069,7 +10654,7 @@ declare class samp {
    * Calls the AMX native PlayerTextDrawSetString 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=PlayerTextDrawSetString] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player who&#x27;s textdraw string to set
    * @param {number} text - The ID of the textdraw to change
@@ -10099,7 +10684,7 @@ declare class samp {
    * Calls the AMX native PlayerTextDrawSetPreviewModel 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=PlayerTextDrawSetPreviewModel] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The PlayerTextDraw player ID
    * @param {number} text - The textdraw id that will display the 3D preview
@@ -10121,7 +10706,7 @@ declare class samp {
    * Calls the AMX native PlayerTextDrawSetPreviewRot 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=PlayerTextDrawSetPreviewRot] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player-textdraw to change
    * @param {number} text - The ID of the player-textdraw to change
@@ -10143,7 +10728,7 @@ declare class samp {
    * Calls the AMX native PlayerTextDrawSetPreviewVehCol 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=PlayerTextDrawSetPreviewVehCol] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player-textdraw to change
    * @param {number} text - The ID of the player&#x27;s player-textdraw to change
@@ -10162,7 +10747,7 @@ declare class samp {
    * Calls the AMX native SetPVarInt 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPVarInt] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player variable will be set
    * @param {string} varname - The name of the player variable
@@ -10185,7 +10770,7 @@ declare class samp {
    * Calls the AMX native GetPVarInt 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPVarInt] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player variable to get
    * @param {string} varname - The name of the player variable (case-insensitive). Assigned in SetPVarInt
@@ -10203,7 +10788,7 @@ declare class samp {
    * Calls the AMX native SetPVarString 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPVarString] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player variable will be set
    * @param {string} varname - The name of the player variable
@@ -10221,7 +10806,7 @@ declare class samp {
    * Calls the AMX native GetPVarString 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPVarString] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player variable to get
    * @param {string} varname - The name of the player variable, set by SetPVarString
@@ -10241,7 +10826,7 @@ declare class samp {
    * Calls the AMX native SetPVarFloat 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPVarFloat] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player variable will be set
    * @param {string} varname - The name of the player variable
@@ -10263,7 +10848,7 @@ declare class samp {
    * Calls the AMX native GetPVarFloat that returns a value with a Float tag
    *
    * @name samp.callNativeFloat
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPVarFloat] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player variable you want to get
    * @param {string} varname - The name of the player variable
@@ -10281,7 +10866,7 @@ declare class samp {
    * Calls the AMX native DeletePVar 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=DeletePVar] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player variable to delete
    * @param {string} varname - The name of the player variable to delete
@@ -10303,7 +10888,7 @@ declare class samp {
    * Calls the AMX native GetPVarsUpperIndex 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPVarsUpperIndex] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the upper PVar index of
    * @summary Each PVar (player-variable) has its own unique identification number for lookup, this function returns the highest ID set for a player.
@@ -10316,7 +10901,7 @@ declare class samp {
    * Calls the AMX native GetPVarNameAtIndex 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPVarNameAtIndex] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player variable to get the name of
    * @param {number} index - The index of the player&#x27;s pVar
@@ -10332,7 +10917,7 @@ declare class samp {
    * Calls the AMX native GetPVarType 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPVarType] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose player variable to get the type of
    * @param {string} varname - The name of the player variable to get the type of
@@ -10360,7 +10945,7 @@ declare class samp {
    * Calls the AMX native SetPlayerChatBubble 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerChatBubble] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - 
    * @param {string} text - 
@@ -10373,7 +10958,7 @@ declare class samp {
    * Calls the AMX native PutPlayerInVehicle 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=PutPlayerInVehicle] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to put in a vehicle
    * @param {number} vehicleid - The ID of the vehicle to put the player in
@@ -10406,7 +10991,7 @@ declare class samp {
    * Calls the AMX native GetPlayerVehicleID 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerVehicleID] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player in the vehicle that you want to get the ID of
    * @summary This function gets the ID of the vehicle the player is currently in. Note: NOT the model id of the vehicle. See GetVehicleModel for that.
@@ -10421,7 +11006,7 @@ declare class samp {
    * Calls the AMX native GetPlayerVehicleSeat 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerVehicleSeat] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player you want to get the seat of
    * @summary Find out which seat a player is in.
@@ -10436,7 +11021,7 @@ declare class samp {
    * Calls the AMX native RemovePlayerFromVehicle 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=RemovePlayerFromVehicle] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to remove from their vehicle
    * @summary Removes/ejects a player from their vehicle.
@@ -10456,7 +11041,7 @@ declare class samp {
    * Calls the AMX native TogglePlayerControllable 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=TogglePlayerControllable] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - 
    * @param {number} toggle - 
@@ -10466,7 +11051,7 @@ declare class samp {
    * Calls the AMX native PlayerPlaySound 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=PlayerPlaySound] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player for whom to play the sound
    * @param {number} soundid - The sound to play
@@ -10488,7 +11073,7 @@ declare class samp {
    * Calls the AMX native ApplyAnimation 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=ApplyAnimation] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to apply the animation to
    * @param {string} animlib - The animation library from which to apply an animation
@@ -10512,7 +11097,7 @@ declare class samp {
    * Calls the AMX native ClearAnimations 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=ClearAnimations] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to clear the animations of
    * @param {number} forcesync - Set to 1 to force playerid to sync the animation with other players in streaming radius (optional&#x3D;0)
@@ -10527,7 +11112,7 @@ declare class samp {
    * Calls the AMX native GetPlayerAnimationIndex 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerAnimationIndex] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - ID of the player of whom you want to get the animation index of
    * @summary Returns the index of any running applied animations.
@@ -10540,7 +11125,7 @@ declare class samp {
    * Calls the AMX native GetAnimationName 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetAnimationName] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} index - The animation index, returned by GetPlayerAnimationIndex
    * @param {number} len1 - Size of the string that stores the animation library
@@ -10555,7 +11140,7 @@ declare class samp {
    * Calls the AMX native GetPlayerSpecialAction 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerSpecialAction] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the special action of
    * @summary Retrieves a player&#x27;s current special action.
@@ -10602,7 +11187,7 @@ declare class samp {
    * Calls the AMX native SetPlayerSpecialAction 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerSpecialAction] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The player that should perform the action
    * @param {number} actionid - The action that should be performed
@@ -10654,7 +11239,7 @@ declare class samp {
    * Calls the AMX native DisableRemoteVehicleCollisions 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=DisableRemoteVehicleCollisions] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - 
    * @param {number} disable - 
@@ -10664,7 +11249,7 @@ declare class samp {
    * Calls the AMX native SetPlayerCheckpoint 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerCheckpoint] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - 
    * @param {number} x - 
@@ -10677,7 +11262,7 @@ declare class samp {
    * Calls the AMX native DisablePlayerCheckpoint 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=DisablePlayerCheckpoint] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose checkpoint to disable
    * @summary Disables (hides/destroys) a player&#x27;s set checkpoint. Players can only have a single checkpoint set at a time. Checkpoints don&#x27;t need to be disabled before setting another one.
@@ -10700,7 +11285,7 @@ declare class samp {
    * Calls the AMX native SetPlayerRaceCheckpoint 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerRaceCheckpoint] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to set the checkpoint for
    * @param {number} type - Type of checkpoint. 0-Normal, 1-Finish, 2-Nothing(Only the checkpoint without anything on it), 3-Air normal, 4-Air finish, 5-Air (rotates and stops), 6-Air (increases, decreases and disappears), 7-Air (swings down and up), 8-Air (swings up and down)
@@ -10736,7 +11321,7 @@ declare class samp {
    * Calls the AMX native DisablePlayerRaceCheckpoint 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=DisablePlayerRaceCheckpoint] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The player to disable the current checkpoint for
    * @summary Disable any initialized race checkpoints for a specific player, since you can only have one at any given time.
@@ -10755,7 +11340,7 @@ declare class samp {
    * Calls the AMX native SetPlayerWorldBounds 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerWorldBounds] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to set the world boundaries of
    * @param {number} x_max - The maximum X coordinate the player can go to
@@ -10773,7 +11358,7 @@ declare class samp {
    * Calls the AMX native SetPlayerMarkerForPlayer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerMarkerForPlayer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The player that will see the player&#x27;s changed blip/nametag color
    * @param {number} showplayerid - The player whose color will be changed
@@ -10789,7 +11374,7 @@ declare class samp {
    * Calls the AMX native ShowPlayerNameTagForPlayer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=ShowPlayerNameTagForPlayer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - Player who will see the results of this function
    * @param {number} showplayerid - Player whose name tag will be shown or hidden
@@ -10805,7 +11390,7 @@ declare class samp {
    * Calls the AMX native SetPlayerMapIcon 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerMapIcon] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to set the map icon for
    * @param {number} iconid - The player&#x27;s icon ID, ranging from 0 to 99. This means there is a maximum of 100 map icons. ID can be used in RemovePlayerMapIcon
@@ -10840,7 +11425,7 @@ declare class samp {
    * Calls the AMX native RemovePlayerMapIcon 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=RemovePlayerMapIcon] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose icon to remove
    * @param {number} iconid - The ID of the icon to remove. This is the second parameter of SetPlayerMapIcon
@@ -10856,7 +11441,7 @@ declare class samp {
    * Calls the AMX native AllowPlayerTeleport 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=AllowPlayerTeleport] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to allow teleport
    * @param {number} allow - 1 to allow, 0 to disallow
@@ -10870,7 +11455,7 @@ declare class samp {
    * Calls the AMX native SetPlayerCameraPos 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerCameraPos] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - ID of the player
    * @param {number} x - The X coordinate to place the camera at
@@ -10892,7 +11477,7 @@ declare class samp {
    * Calls the AMX native SetPlayerCameraLookAt 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerCameraLookAt] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose camera to set
    * @param {number} x - The X coordinate for the player&#x27;s camera to look at
@@ -10915,7 +11500,7 @@ declare class samp {
    * Calls the AMX native SetCameraBehindPlayer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetCameraBehindPlayer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The player you want to restore the camera for
    * @summary Restore the camera to a place behind the player, after using a function like SetPlayerCameraPos.
@@ -10927,7 +11512,7 @@ declare class samp {
    * Calls the AMX native GetPlayerCameraPos 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerCameraPos] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the camera position of
    * @summary Get the position of the player&#x27;s camera.
@@ -10945,7 +11530,7 @@ declare class samp {
    * Calls the AMX native GetPlayerCameraFrontVector 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerCameraFrontVector] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player you want to obtain the camera front vector of
    * @summary This function will return the current direction of player&#x27;s aiming in 3-D space, the coords are relative to the camera position, see GetPlayerCameraPos.
@@ -10960,7 +11545,7 @@ declare class samp {
    * Calls the AMX native GetPlayerCameraMode 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerCameraMode] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player whose camera mode to retrieve
    * @summary Returns the current GTA camera mode for the requested player. The camera modes are useful in determining whether a player is aiming, doing a passenger driveby etc.
@@ -10977,7 +11562,7 @@ declare class samp {
    * Calls the AMX native EnablePlayerCameraTarget 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=EnablePlayerCameraTarget] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to toggle camera targeting functions for
    * @param {number} enable - 1 to enable camera targeting functions and 0 to disable them
@@ -10996,7 +11581,7 @@ declare class samp {
    * Calls the AMX native GetPlayerCameraTargetObject 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerCameraTargetObject] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to check
    * @summary Allows you to retrieve the ID of the object the player is looking at.
@@ -11012,7 +11597,7 @@ declare class samp {
    * Calls the AMX native GetPlayerCameraTargetVehicle 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerCameraTargetVehicle] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to check
    * @summary Get the ID of the vehicle the player is looking at.
@@ -11030,7 +11615,7 @@ declare class samp {
    * Calls the AMX native GetPlayerCameraTargetPlayer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerCameraTargetPlayer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to check
    * @summary Allows you to retrieve the ID of the player the playerid is looking at.
@@ -11048,7 +11633,7 @@ declare class samp {
    * Calls the AMX native GetPlayerCameraTargetActor 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerCameraTargetActor] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the target actor of
    * @summary Allows you to retrieve the ID of the actor the player is looking at (if any).
@@ -11067,7 +11652,7 @@ declare class samp {
    * Calls the AMX native GetPlayerCameraAspectRatio that returns a value with a Float tag
    *
    * @name samp.callNativeFloat
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerCameraAspectRatio] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the camera aspect ratio of
    * @summary Retrieves the aspect ratio of a player&#x27;s camera.
@@ -11083,7 +11668,7 @@ declare class samp {
    * Calls the AMX native GetPlayerCameraZoom that returns a value with a Float tag
    *
    * @name samp.callNativeFloat
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerCameraZoom] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the camera zoom level of
    * @summary Retrieves the game camera zoom level for a given player.
@@ -11099,7 +11684,7 @@ declare class samp {
    * Calls the AMX native AttachCameraToObject 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=AttachCameraToObject] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player which will have your camera attached on object
    * @param {number} objectid - The object id which you want to attach the player camera
@@ -11113,7 +11698,7 @@ declare class samp {
    * Calls the AMX native AttachCameraToPlayerObject 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=AttachCameraToPlayerObject] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player which will have their camera attached to a player-object
    * @param {number} playerobjectid - The ID of the player-object to which the player&#x27;s camera will be attached
@@ -11129,7 +11714,7 @@ declare class samp {
    * Calls the AMX native InterpolateCameraPos 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=InterpolateCameraPos] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player the camera should be moved for
    * @param {number} FromX - The X position the camera should start to move from
@@ -11152,7 +11737,7 @@ declare class samp {
    * Calls the AMX native InterpolateCameraLookAt 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=InterpolateCameraLookAt] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player the camera should be moved for
    * @param {number} FromX - The X position the camera should start to move from
@@ -11175,7 +11760,7 @@ declare class samp {
    * Calls the AMX native IsPlayerConnected 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=IsPlayerConnected] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to check
    * @summary Checks if a player is connected (if an ID is taken by a connected player).
@@ -11190,7 +11775,7 @@ declare class samp {
    * Calls the AMX native IsPlayerInVehicle 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=IsPlayerInVehicle] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - ID of the player
    * @param {number} vehicleid - ID of the vehicle
@@ -11204,7 +11789,7 @@ declare class samp {
    * Calls the AMX native IsPlayerInAnyVehicle 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=IsPlayerInAnyVehicle] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to check
    * @summary Check if a player is inside any vehicle (as a driver or passenger).
@@ -11217,7 +11802,7 @@ declare class samp {
    * Calls the AMX native IsPlayerInCheckpoint 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=IsPlayerInCheckpoint] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The player you want to know the status of
    * @summary Check if the player is currently inside a checkpoint, this could be used for properties or teleport points for example.
@@ -11237,7 +11822,7 @@ declare class samp {
    * Calls the AMX native IsPlayerInRaceCheckpoint 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=IsPlayerInRaceCheckpoint] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to check
    * @summary Check if the player is inside their current set race checkpoint (SetPlayerRaceCheckpoint).
@@ -11257,7 +11842,7 @@ declare class samp {
    * Calls the AMX native SetPlayerVirtualWorld 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetPlayerVirtualWorld] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player you want to set the virtual world of
    * @param {number} worldid - The virtual world ID to put the player in
@@ -11275,7 +11860,7 @@ declare class samp {
    * Calls the AMX native GetPlayerVirtualWorld 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetPlayerVirtualWorld] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to get the virtual world of
    * @summary Retrieves the current virtual world the player is in.
@@ -11289,7 +11874,7 @@ declare class samp {
    * Calls the AMX native EnableStuntBonusForPlayer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=EnableStuntBonusForPlayer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to toggle stunt bonuses for
    * @param {number} enable - 1 to enable stunt bonuses and 0 to disable them
@@ -11305,7 +11890,7 @@ declare class samp {
    * Calls the AMX native EnableStuntBonusForAll 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=EnableStuntBonusForAll] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} enable - 1 to enable stunt bonuses or 0 to disable them
    * @summary Enables or disables stunt bonuses for all players. If enabled, players will receive monetary rewards when performing a stunt in a vehicle (e.g. a wheelie).
@@ -11316,7 +11901,7 @@ declare class samp {
    * Calls the AMX native TogglePlayerSpectating 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=TogglePlayerSpectating] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player who should spectate
    * @param {number} toggle - 1 to enable spectating and 0 to disable
@@ -11336,7 +11921,7 @@ declare class samp {
    * Calls the AMX native PlayerSpectatePlayer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=PlayerSpectatePlayer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player that will spectate
    * @param {number} targetplayerid - The ID of the player that should be spectated
@@ -11364,7 +11949,7 @@ declare class samp {
    * Calls the AMX native PlayerSpectateVehicle 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=PlayerSpectateVehicle] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player who should spectate a vehicle
    * @param {number} targetvehicleid - The ID of the vehicle the player should spectate
@@ -11384,7 +11969,7 @@ declare class samp {
    * Calls the AMX native StartRecordingPlayerData 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=StartRecordingPlayerData] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to record
    * @param {number} recordtype - The type of recording
@@ -11398,7 +11983,7 @@ declare class samp {
    * Calls the AMX native StopRecordingPlayerData 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=StopRecordingPlayerData] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The player you want to stop the recordings of
    * @summary Stops all the recordings that had been started with StartRecordingPlayerData for a specific player.
@@ -11410,7 +11995,7 @@ declare class samp {
    * Calls the AMX native SelectTextDraw 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SelectTextDraw] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player that should be able to select a textdraw
    * @param {number} hovercolor - The color of the textdraw when hovering over with mouse (RGBA)
@@ -11429,7 +12014,7 @@ declare class samp {
    * Calls the AMX native CancelSelectTextDraw 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=CancelSelectTextDraw] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player that should be the textdraw selection disabled
    * @summary Cancel textdraw selection with the mouse.
@@ -11444,7 +12029,7 @@ declare class samp {
    * Calls the AMX native CreateExplosionForPlayer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=CreateExplosionForPlayer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - The ID of the player to create the explosion for
    * @param {number} X - The X coordinate of the explosion
@@ -11463,7 +12048,7 @@ declare class samp {
    * Calls the AMX native SendClientCheck 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SendClientCheck] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} playerid - 
    * @param {number} type - 
@@ -11476,7 +12061,7 @@ declare class samp {
    * Calls the AMX native db_open 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=db_open] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {string} name - 
    */
@@ -11485,7 +12070,7 @@ declare class samp {
    * Calls the AMX native db_close 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=db_close] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} db - 
    */
@@ -11494,7 +12079,7 @@ declare class samp {
    * Calls the AMX native db_query 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=db_query] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} db - 
    * @param {string} query - 
@@ -11504,7 +12089,7 @@ declare class samp {
    * Calls the AMX native db_free_result 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=db_free_result] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} dbresult - 
    */
@@ -11513,7 +12098,7 @@ declare class samp {
    * Calls the AMX native db_num_rows 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=db_num_rows] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} dbresult - 
    */
@@ -11522,7 +12107,7 @@ declare class samp {
    * Calls the AMX native db_next_row 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=db_next_row] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} dbresult - 
    */
@@ -11531,7 +12116,7 @@ declare class samp {
    * Calls the AMX native db_num_fields 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=db_num_fields] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} dbresult - 
    */
@@ -11540,7 +12125,7 @@ declare class samp {
    * Calls the AMX native db_field_name 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=db_field_name] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} dbresult - 
    * @param {number} field - 
@@ -11551,7 +12136,7 @@ declare class samp {
    * Calls the AMX native db_get_field 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=db_get_field] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} dbresult - 
    * @param {number} field - 
@@ -11562,7 +12147,7 @@ declare class samp {
    * Calls the AMX native db_get_field_int 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=db_get_field_int] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} result - 
    * @param {number} field - 
@@ -11572,7 +12157,7 @@ declare class samp {
    * Calls the AMX native db_get_field_float that returns a value with a Float tag
    *
    * @name samp.callNativeFloat
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=db_get_field_float] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} result - 
    * @param {number} field - 
@@ -11582,7 +12167,7 @@ declare class samp {
    * Calls the AMX native db_get_field_assoc 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=db_get_field_assoc] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} dbresult - 
    * @param {string} field - 
@@ -11593,7 +12178,7 @@ declare class samp {
    * Calls the AMX native db_get_field_assoc_int 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=db_get_field_assoc_int] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} result - 
    * @param {string} field - 
@@ -11603,7 +12188,7 @@ declare class samp {
    * Calls the AMX native db_get_field_assoc_float that returns a value with a Float tag
    *
    * @name samp.callNativeFloat
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=db_get_field_assoc_float] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} result - 
    * @param {string} field - 
@@ -11613,7 +12198,7 @@ declare class samp {
    * Calls the AMX native db_get_mem_handle 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=db_get_mem_handle] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} db - 
    */
@@ -11622,7 +12207,7 @@ declare class samp {
    * Calls the AMX native db_get_result_mem_handle 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=db_get_result_mem_handle] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} result - 
    */
@@ -11631,7 +12216,7 @@ declare class samp {
    * Calls the AMX native db_debug_openfiles 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=db_debug_openfiles] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    */
   static callNative(nativeName: 'db_debug_openfiles', paramTypes: ''): number;
@@ -11639,7 +12224,7 @@ declare class samp {
    * Calls the AMX native db_debug_openresults 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=db_debug_openresults] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    */
   static callNative(nativeName: 'db_debug_openresults', paramTypes: ''): number;
@@ -11647,7 +12232,7 @@ declare class samp {
    * Calls the AMX native CreateVehicle 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=CreateVehicle] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicletype - The model for the vehicle
    * @param {number} x - The X coordinate for the vehicle
@@ -11676,7 +12261,7 @@ declare class samp {
    * Calls the AMX native DestroyVehicle 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=DestroyVehicle] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to destroy
    * @summary Destroy a vehicle. It will disappear instantly.
@@ -11693,7 +12278,7 @@ declare class samp {
    * Calls the AMX native IsVehicleStreamedIn 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=IsVehicleStreamedIn] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to check
    * @param {number} forplayerid - The ID of the player to check
@@ -11714,7 +12299,7 @@ declare class samp {
    * Calls the AMX native GetVehiclePos 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetVehiclePos] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to get the position of
    * @summary Gets the position of a vehicle.
@@ -11731,7 +12316,7 @@ declare class samp {
    * Calls the AMX native SetVehiclePos 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetVehiclePos] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - Vehicle ID that you want set new position
    * @param {number} x - The X coordinate to position the vehicle at
@@ -11752,7 +12337,7 @@ declare class samp {
    * Calls the AMX native GetVehicleZAngle 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetVehicleZAngle] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to get the Z angle of
    * @summary Get the rotation of a vehicle on the Z axis (yaw).
@@ -11771,7 +12356,7 @@ declare class samp {
    * Calls the AMX native GetVehicleRotationQuat 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetVehicleRotationQuat] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to get the rotation of
    * @summary Returns a vehicle&#x27;s rotation on all axes as a quaternion.
@@ -11802,7 +12387,7 @@ declare class samp {
    * Calls the AMX native GetVehicleDistanceFromPoint that returns a value with a Float tag
    *
    * @name samp.callNativeFloat
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetVehicleDistanceFromPoint] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to calculate the distance for
    * @param {number} X - The X map coordinate
@@ -11819,7 +12404,7 @@ declare class samp {
    * Calls the AMX native SetVehicleZAngle 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetVehicleZAngle] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to set the rotation of
    * @param {number} z_angle - The Z angle to set
@@ -11838,7 +12423,7 @@ declare class samp {
    * Calls the AMX native SetVehicleParamsForPlayer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetVehicleParamsForPlayer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - 
    * @param {number} playerid - The ID of the player to set the vehicle&#x27;s parameters for
@@ -11858,7 +12443,7 @@ declare class samp {
    * Calls the AMX native ManualVehicleEngineAndLights 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=ManualVehicleEngineAndLights] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @summary Use this function before any player connects (OnGameModeInit) to tell all clients that the script will control vehicle engines and lights. This prevents the game automatically turning the engine on/off when players enter/exit vehicles and headlights automatically coming on when it is dark.
    * @see SetVehicleParamsEx
@@ -11873,7 +12458,7 @@ declare class samp {
    * Calls the AMX native SetVehicleParamsEx 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetVehicleParamsEx] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to set the parameters of
    * @param {number} engine - Engine status. 0 - Off, 1 - On
@@ -11900,7 +12485,7 @@ declare class samp {
    * Calls the AMX native GetVehicleParamsEx 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetVehicleParamsEx] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to get the parameters from
    * @summary Gets a vehicle&#x27;s parameters.
@@ -11913,7 +12498,7 @@ declare class samp {
    * Calls the AMX native GetVehicleParamsSirenState 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetVehicleParamsSirenState] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to get the siren state of
    * @summary Returns a vehicle&#x27;s siren state (on/off).
@@ -11926,7 +12511,7 @@ declare class samp {
    * Calls the AMX native SetVehicleParamsCarDoors 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetVehicleParamsCarDoors] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to set the door state of
    * @param {number} driver - The state of the driver&#x27;s door. 1 to open, 0 to close
@@ -11945,7 +12530,7 @@ declare class samp {
    * Calls the AMX native GetVehicleParamsCarDoors 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetVehicleParamsCarDoors] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle
    * @summary Allows you to retrieve the current state of a vehicle&#x27;s doors.
@@ -11960,7 +12545,7 @@ declare class samp {
    * Calls the AMX native SetVehicleParamsCarWindows 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetVehicleParamsCarWindows] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to set the window state of
    * @param {number} driver - The state of the driver&#x27;s window. 0 to open, 1 to close
@@ -11978,7 +12563,7 @@ declare class samp {
    * Calls the AMX native GetVehicleParamsCarWindows 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetVehicleParamsCarWindows] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle
    * @summary Allows you to retrieve the current state of a vehicle&#x27;s windows.
@@ -11994,7 +12579,7 @@ declare class samp {
    * Calls the AMX native SetVehicleToRespawn 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetVehicleToRespawn] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to respawn
    * @summary Sets a vehicle back to the position at where it was created.
@@ -12010,7 +12595,7 @@ declare class samp {
    * Calls the AMX native LinkVehicleToInterior 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=LinkVehicleToInterior] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to link to an interior
    * @param {number} interiorid - The Interior ID to link it to
@@ -12027,7 +12612,7 @@ declare class samp {
    * Calls the AMX native AddVehicleComponent 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=AddVehicleComponent] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to add the component to. Not to be confused with modelid
    * @param {number} componentid - The ID of the component to add to the vehicle
@@ -12050,7 +12635,7 @@ declare class samp {
    * Calls the AMX native RemoveVehicleComponent 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=RemoveVehicleComponent] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - ID of the vehicle
    * @param {number} componentid - ID of the component to remove
@@ -12066,7 +12651,7 @@ declare class samp {
    * Calls the AMX native ChangeVehicleColor 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=ChangeVehicleColor] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to change the colors of
    * @param {number} color1 - The new vehicle&#x27;s primary Color ID
@@ -12085,7 +12670,7 @@ declare class samp {
    * Calls the AMX native ChangeVehiclePaintjob 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=ChangeVehiclePaintjob] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to change the paintjob of
    * @param {number} paintjobid - The ID of the Paintjob to apply. Use 3 to remove a paintjob
@@ -12104,7 +12689,7 @@ declare class samp {
    * Calls the AMX native SetVehicleHealth 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetVehicleHealth] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to set the health of
    * @param {number} health - The health, given as a float value
@@ -12134,7 +12719,7 @@ declare class samp {
    * Calls the AMX native GetVehicleHealth 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetVehicleHealth] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to get the health of
    * @summary Get the health of a vehicle.
@@ -12162,7 +12747,7 @@ declare class samp {
    * Calls the AMX native AttachTrailerToVehicle 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=AttachTrailerToVehicle] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} trailerid - The ID of the vehicle that will be pulled
    * @param {number} vehicleid - The ID of the vehicle that will pull the trailer
@@ -12178,7 +12763,7 @@ declare class samp {
    * Calls the AMX native DetachTrailerFromVehicle 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=DetachTrailerFromVehicle] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - ID of the pulling vehicle
    * @summary Detach the connection between a vehicle and its trailer, if any.
@@ -12191,7 +12776,7 @@ declare class samp {
    * Calls the AMX native IsTrailerAttachedToVehicle 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=IsTrailerAttachedToVehicle] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to check for trailers
    * @summary Checks if a vehicle has a trailer attached to it. Use GetVehicleTrailer to get the vehicle ID of the trailer (if any).
@@ -12205,7 +12790,7 @@ declare class samp {
    * Calls the AMX native GetVehicleTrailer 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetVehicleTrailer] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to get the trailer of
    * @summary Get the ID of the trailer attached to a vehicle.
@@ -12219,7 +12804,7 @@ declare class samp {
    * Calls the AMX native SetVehicleNumberPlate 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetVehicleNumberPlate] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to set the number plate of
    * @param {string} numberplate - The text that should be displayed on the number plate
@@ -12247,7 +12832,7 @@ declare class samp {
    * Calls the AMX native GetVehicleModel 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetVehicleModel] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to get the model of
    * @summary Gets the model ID of a vehicle.
@@ -12262,7 +12847,7 @@ declare class samp {
    * Calls the AMX native GetVehicleComponentInSlot 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetVehicleComponentInSlot] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to check for the component
    * @param {number} slot - The component slot to check for components (see below)
@@ -12307,7 +12892,7 @@ declare class samp {
    * Calls the AMX native GetVehicleComponentType 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetVehicleComponentType] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} component - The component ID to check
    * @summary Find out what type of component a certain ID is.
@@ -12324,7 +12909,7 @@ declare class samp {
    * Calls the AMX native RepairVehicle 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=RepairVehicle] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to repair
    * @summary Fully repairs a vehicle, including visual damage (bumps, dents, scratches, popped tires etc.).
@@ -12341,7 +12926,7 @@ declare class samp {
    * Calls the AMX native GetVehicleVelocity 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetVehicleVelocity] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to get the velocity of
    * @summary Get the velocity of a vehicle on the X, Y and Z axes.
@@ -12360,7 +12945,7 @@ declare class samp {
    * Calls the AMX native SetVehicleVelocity 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetVehicleVelocity] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - 
    * @param {number} X - 
@@ -12372,7 +12957,7 @@ declare class samp {
    * Calls the AMX native SetVehicleAngularVelocity 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetVehicleAngularVelocity] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to set the velocity of
    * @param {number} X - The amount of velocity in the angular X direction
@@ -12393,7 +12978,7 @@ declare class samp {
    * Calls the AMX native GetVehicleDamageStatus 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetVehicleDamageStatus] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to get the damage statuses of
    * @summary Retrieve the damage statuses of a vehicle.
@@ -12445,7 +13030,7 @@ declare class samp {
    * Calls the AMX native UpdateVehicleDamageStatus 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=UpdateVehicleDamageStatus] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to set the damage of
    * @param {number} panels - A set of bits containing the panel damage status
@@ -12497,7 +13082,7 @@ declare class samp {
    * Calls the AMX native GetVehicleModelInfo 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetVehicleModelInfo] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehiclemodel - The vehicle model to get info of
    * @param {number} infotype - The type of information to retrieve
@@ -12524,7 +13109,7 @@ declare class samp {
    * Calls the AMX native SetVehicleVirtualWorld 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=SetVehicleVirtualWorld] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of vehicle to set the virtual world of
    * @param {number} worldid - The ID of the virtual world to put the vehicle in
@@ -12537,7 +13122,7 @@ declare class samp {
    * Calls the AMX native GetVehicleVirtualWorld 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=GetVehicleVirtualWorld] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to get the virtual world of
    * @summary Get the virtual world of a vehicle.
@@ -12550,7 +13135,7 @@ declare class samp {
    * Calls the AMX native IsValidVehicle 
    *
    * @name samp.callNative
-   * @param {string} nativeName - Name of the native
+   * @param {string} [nativeName=IsValidVehicle] - Name of the native
    * @param {string} paramTypes - String of argument specifiers
    * @param {number} vehicleid - The ID of the vehicle to check
    * @summary Check if a vehicle ID is valid.

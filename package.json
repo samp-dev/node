@@ -1,6 +1,6 @@
 {
   "name": "@sa-mp/node",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "TBD",
   "main": "",
   "types": "./@types/index.d.ts",
