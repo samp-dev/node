@@ -7943,7 +7943,7 @@ declare class samp {
   0: The function failed to execute. The actor specified does not exist.
 
    */
-  static callNative(nativeName: 'GetActorPos', paramTypes: 'iFFF', actorid: number): Array<any>;
+  static callNative(nativeName: 'GetActorPos', paramTypes: 'iFFF', actorid: number): [number, number, number];
   /**
    * Calls the AMX native SetActorFacingAngle 
    *
@@ -8196,7 +8196,7 @@ declare class samp {
   0: The function failed to execute. The specified object does not exist.
 
    */
-  static callNative(nativeName: 'GetObjectPos', paramTypes: 'iFFF', objectid: number): Array<any>;
+  static callNative(nativeName: 'GetObjectPos', paramTypes: 'iFFF', objectid: number): [number, number, number];
   /**
    * Calls the AMX native SetObjectRot 
    *
@@ -8229,7 +8229,7 @@ declare class samp {
    * @see CreateObject
    * @returns The object&#x27;s rotation is stored in the referenced variables, not in the return value.
    */
-  static callNative(nativeName: 'GetObjectRot', paramTypes: 'iFFF', objectid: number): Array<any>;
+  static callNative(nativeName: 'GetObjectRot', paramTypes: 'iFFF', objectid: number): [number, number, number];
   /**
    * Calls the AMX native GetObjectModel 
    *
@@ -8516,7 +8516,7 @@ declare class samp {
   The object&#x27;s position is stored in the specified variables.
 
    */
-  static callNative(nativeName: 'GetPlayerObjectPos', paramTypes: 'iiFFF', playerid: number, objectid: number): Array<any>;
+  static callNative(nativeName: 'GetPlayerObjectPos', paramTypes: 'iiFFF', playerid: number, objectid: number): [number, number, number];
   /**
    * Calls the AMX native SetPlayerObjectRot 
    *
@@ -8555,7 +8555,7 @@ declare class samp {
    * @see CreatePlayerObject
    * @returns The object&#x27;s rotation is stored in the specified variables.
    */
-  static callNative(nativeName: 'GetPlayerObjectRot', paramTypes: 'iiFFF', playerid: number, objectid: number): Array<any>;
+  static callNative(nativeName: 'GetPlayerObjectRot', paramTypes: 'iiFFF', playerid: number, objectid: number): [number, number, number];
   /**
    * Calls the AMX native GetPlayerObjectModel 
    *
@@ -8962,7 +8962,7 @@ declare class samp {
    * @remarks This function is known to return unreliable values when used in OnPlayerDisconnect and OnPlayerRequestClass. This is because the player is not spawned.
    * @returns true on success, false on failure (i.e. player not connected).
    */
-  static callNative(nativeName: 'GetPlayerPos', paramTypes: 'iFFF', playerid: number): Array<any>;
+  static callNative(nativeName: 'GetPlayerPos', paramTypes: 'iFFF', playerid: number): [number, number, number];
   /**
    * Calls the AMX native SetPlayerFacingAngle 
    *
@@ -9494,7 +9494,7 @@ declare class samp {
   0: The function failed to execute. The player isn&#x27;t connected and/or the weapon slot specified is invalid (valid is 0-12).
 
    */
-  static callNative(nativeName: 'GetPlayerWeaponData', paramTypes: 'iiII', playerid: number, slot: number): Array<any>;
+  static callNative(nativeName: 'GetPlayerWeaponData', paramTypes: 'iiII', playerid: number, slot: number): [number, number];
   /**
    * Calls the AMX native GivePlayerMoney 
    *
@@ -9654,7 +9654,7 @@ declare class samp {
    * @remarks As of update 0.3.7, the keys &quot;A&quot; and &quot;D&quot; are not recognized when in a vehicle. However, keys &quot;W&quot; and &quot;S&quot; can be detected with the &quot;keys&quot; parameter. 
    * @returns The keys are stored in the specified variables.
    */
-  static callNative(nativeName: 'GetPlayerKeys', paramTypes: 'iIII', playerid: number): Array<any>;
+  static callNative(nativeName: 'GetPlayerKeys', paramTypes: 'iIII', playerid: number): [number, number, number];
   /**
    * Calls the AMX native GetPlayerName 
    *
@@ -9709,7 +9709,7 @@ declare class samp {
   0: The function failed to execute. The player specified does not exist.
 
    */
-  static callNative(nativeName: 'GetPlayerTime', paramTypes: 'iII', playerid: number): Array<any>;
+  static callNative(nativeName: 'GetPlayerTime', paramTypes: 'iII', playerid: number): [number, number];
   /**
    * Calls the AMX native TogglePlayerClock 
    *
@@ -9862,7 +9862,7 @@ declare class samp {
    * @see GetVehicleVelocity
    * @remarks This function was added in SA-MP 0.3a and will not work in earlier versions!
    */
-  static callNative(nativeName: 'GetPlayerVelocity', paramTypes: 'iFFF', playerid: number): Array<any>;
+  static callNative(nativeName: 'GetPlayerVelocity', paramTypes: 'iFFF', playerid: number): [number, number, number];
   /**
    * Calls the AMX native PlayCrimeReportForPlayer 
    *
@@ -10060,7 +10060,7 @@ declare class samp {
   0: The function failed to execute. The player specified does not exist.
 
    */
-  static callNative(nativeName: 'GetPlayerLastShotVectors', paramTypes: 'iFFFFFF', playerid: number): Array<any>;
+  static callNative(nativeName: 'GetPlayerLastShotVectors', paramTypes: 'iFFFFFF', playerid: number): [number, number, number, number, number, number];
   /**
    * Calls the AMX native SetPlayerAttachedObject 
    *
@@ -11135,7 +11135,7 @@ declare class samp {
    * @remarks This function was added in SA-MP 0.3b and will not work in earlier versions!
    * @returns 1 on success, 0 on failure.
    */
-  static callNative(nativeName: 'GetAnimationName', paramTypes: 'iSiSi', index: number, len1: number, len2: number): Array<any>;
+  static callNative(nativeName: 'GetAnimationName', paramTypes: 'iSiSi', index: number, len1: number, len2: number): [string, string];
   /**
    * Calls the AMX native GetPlayerSpecialAction 
    *
@@ -11525,7 +11525,7 @@ declare class samp {
    * @remarks Player&#x27;s camera positions are only updated once a second, unless aiming.
    * @remarks It is recommended to set a 1 second timer if you wish to take action that relies on a player&#x27;s camera position.
    */
-  static callNative(nativeName: 'GetPlayerCameraPos', paramTypes: 'iFFF', playerid: number): Array<any>;
+  static callNative(nativeName: 'GetPlayerCameraPos', paramTypes: 'iFFF', playerid: number): [number, number, number];
   /**
    * Calls the AMX native GetPlayerCameraFrontVector 
    *
@@ -11540,7 +11540,7 @@ declare class samp {
    * @remarks Since 0.3b the camera data can be obtained when the player is in any vehicle or on foot. 
    * @returns The position is stored in the specified variables.
    */
-  static callNative(nativeName: 'GetPlayerCameraFrontVector', paramTypes: 'iFFF', playerid: number): Array<any>;
+  static callNative(nativeName: 'GetPlayerCameraFrontVector', paramTypes: 'iFFF', playerid: number): [number, number, number];
   /**
    * Calls the AMX native GetPlayerCameraMode 
    *
@@ -12311,7 +12311,7 @@ declare class samp {
   0: The function failed to execute. The vehicle specified does not exist.
 
    */
-  static callNative(nativeName: 'GetVehiclePos', paramTypes: 'iFFF', vehicleid: number): Array<any>;
+  static callNative(nativeName: 'GetVehiclePos', paramTypes: 'iFFF', vehicleid: number): [number, number, number];
   /**
    * Calls the AMX native SetVehiclePos 
    *
@@ -12382,7 +12382,7 @@ declare class samp {
   0: The function failed to execute. This means the vehicle specified does not exist.
 
    */
-  static callNative(nativeName: 'GetVehicleRotationQuat', paramTypes: 'iFFFF', vehicleid: number): Array<any>;
+  static callNative(nativeName: 'GetVehicleRotationQuat', paramTypes: 'iFFFF', vehicleid: number): [number, number, number, number];
   /**
    * Calls the AMX native GetVehicleDistanceFromPoint that returns a value with a Float tag
    *
@@ -12493,7 +12493,7 @@ declare class samp {
    * @remarks This function was added in SA-MP 0.3c and will not work in earlier versions!
    * @remarks If a parameter is unset (SetVehicleParamsEx not used beforehand) the value will be -1 (&#x27;unset&#x27;).
    */
-  static callNative(nativeName: 'GetVehicleParamsEx', paramTypes: 'iIIIIIII', vehicleid: number): Array<any>;
+  static callNative(nativeName: 'GetVehicleParamsEx', paramTypes: 'iIIIIIII', vehicleid: number): [number, number, number, number, number, number, number];
   /**
    * Calls the AMX native GetVehicleParamsSirenState 
    *
@@ -12540,7 +12540,7 @@ declare class samp {
    * @remarks This function was added in SA-MP 0.3.7 and will not work in earlier versions!
    * @remarks The values returned in each variable are as follows: -1 if not set, 0 if closed, 1 if open.
    */
-  static callNative(nativeName: 'GetVehicleParamsCarDoors', paramTypes: 'iIIII', vehicleid: number): Array<any>;
+  static callNative(nativeName: 'GetVehicleParamsCarDoors', paramTypes: 'iIIII', vehicleid: number): [number, number, number, number];
   /**
    * Calls the AMX native SetVehicleParamsCarWindows 
    *
@@ -12574,7 +12574,7 @@ declare class samp {
    * @remarks The values returned in each variable are as follows: -1 if not set, 0 if closed, 1 if open.
    * @returns The vehicle&#x27;s windows state is stored in the specified variables.
    */
-  static callNative(nativeName: 'GetVehicleParamsCarWindows', paramTypes: 'iIIII', vehicleid: number): Array<any>;
+  static callNative(nativeName: 'GetVehicleParamsCarWindows', paramTypes: 'iIIII', vehicleid: number): [number, number, number, number];
   /**
    * Calls the AMX native SetVehicleToRespawn 
    *
@@ -12940,7 +12940,7 @@ declare class samp {
   0: The function failed to execute. This means the vehicle specified does not exist.
 
    */
-  static callNative(nativeName: 'GetVehicleVelocity', paramTypes: 'iFFF', vehicleid: number): Array<any>;
+  static callNative(nativeName: 'GetVehicleVelocity', paramTypes: 'iFFF', vehicleid: number): [number, number, number];
   /**
    * Calls the AMX native SetVehicleVelocity 
    *
@@ -13025,7 +13025,7 @@ declare class samp {
   0: The function failed to execute. This means the vehicle specified does not exist.
 
    */
-  static callNative(nativeName: 'GetVehicleDamageStatus', paramTypes: 'iIIII', vehicleid: number): Array<any>;
+  static callNative(nativeName: 'GetVehicleDamageStatus', paramTypes: 'iIIII', vehicleid: number): [number, number, number, number];
   /**
    * Calls the AMX native UpdateVehicleDamageStatus 
    *
@@ -13104,7 +13104,7 @@ declare class samp {
   
 
    */
-  static callNative(nativeName: 'GetVehicleModelInfo', paramTypes: 'iiFFF', vehiclemodel: number, infotype: number): Array<any>;
+  static callNative(nativeName: 'GetVehicleModelInfo', paramTypes: 'iiFFF', vehiclemodel: number, infotype: number): [number, number, number];
   /**
    * Calls the AMX native SetVehicleVirtualWorld 
    *
